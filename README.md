@@ -1,0 +1,1 @@
+# Qoricha-aadaa-App
