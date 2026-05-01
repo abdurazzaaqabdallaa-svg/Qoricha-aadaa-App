@@ -1,24 +1,4 @@
-const cacheName = 'qoricha-v1';
-const assets = [
-  './',
-  './index.html',
-  './manifest.json'
-];
-
-// Install service worker
-self.addEventListener('install', e => {
-  e.waitUntil(
-    caches.open(cacheName).then(cache => {
-      cache.addAll(assets);
-    })
-  );
-});
-
-// Fetch events
-self.addEventListener('fetch', e => {
-  e.respondWith(
-    caches.match(e.request).then(res => {
-      return res || fetch(e.request);
-    })
-  );
+self.addEventListener('fetch', function(event) {
+  // Ammaaf waan hunda interneeta irraa akka fidu qofa godha
+  event.respondWith(fetch(event.request));
 });
