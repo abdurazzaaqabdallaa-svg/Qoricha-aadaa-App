@@ -1,29 +1,31 @@
-
 <!DOCTYPE html>
 <html lang="om">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Qoricha Aadaa App</title>
+    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2172834430426530" crossorigin="anonymous"></script>
+    
+    <link rel="manifest" href="manifest.json">
+
     <style>
         body { font-family: sans-serif; background-color: #f4f9f4; color: #2d5a27; padding: 20px; }
         .container { max-width: 500px; margin: auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
         h1 { text-align: center; color: #1b4332; }
-        input, button { width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid #ccc; }
+        input, button { width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid #ccc; box-sizing: border-box; }
         button { background-color: #2d5a27; color: white; cursor: pointer; border: none; }
         button:hover { background-color: #40916c; }
         .result-card { background: #e9f5db; padding: 15px; border-left: 5px solid #2d5a27; margin-top: 20px; display: none; }
-   </styl>
-     
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2172834430426530" crossorigin="anonymous"></script>
-        <link rel="manifest" href="manifest.json">
-
-<script>
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('sw.js');
-  }
-</script>
-
+        article { margin-bottom: 40px; } /* Iddoo dabalataa barreeffama gidduuf */
+    </style> <script>
+      // Service Worker Galmeessuu (Sirreeffama)
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('sw.js');
+        });
+      }
+    </script>
 </head>
 <body>
 
@@ -33,133 +35,20 @@
     <input type="text" id="medName" placeholder="Fkn: Damakesee, Qeeltoo...">
     <button onclick="barbaadi()">Faayidaa Barbaadi</button>
     
-<div style="margin-top: 40px; padding: 25px; line-height: 1.8; color: #333; background-color: #ffffff; border-radius: 10px; font-family: 'Arial', sans-serif; border: 1px solid #eee;">
-
-    <article style="margin-bottom: 50px; border-bottom: 2px solid #2e7d32; padding-bottom: 20px;">
-        <h1 style="color: #2e7d32;">Qoricha Aadaa: Humna Durii kan Addunyaa Raasaa Jiru!</h1>
-        <p style="font-size: 0.9em; color: #666;">Maxxansame: Ebla 17, 2026</p>
-        <p>Addunyaan keenya gara dhaloota teeknoolojii fi saayinsii ammayyaatti yoo ceetu, beekumsi durii fi qabeenyi uumamaa garuu caalaatti gatii argachaa dhufeera. Qorichi aadaa (Traditional Medicine) har’a akka filannoo lammataatti utuu hin taane, akka bu’uura fayyaa addunyaatti ilaalamaa jira.</p>
-        
-        <h3>Biyya Fakkeenya Addunyaa: Maalirraa Baranna?</h3>
-        <p>Yeroo dhimma qoricha aadaa kaafnu, biyyi Hindii fakkeenya ishee tokkoffaadha. Isaan beekumsa waggaa 5,000 qaban akkamitti gara saayinsii ammayyaatti jijjiiran? Ministeera addaa (AYUSH) hundeeffatanii, barattoonni akka dhibeewwan ammayyaa (X-ray, Ultrasound) fi qoricha aadaa walitti makanii baratan taasifameera.</p>
-        
-        <h3>Bu’aa Qorichi Aadaa Addunyaaf Kenne</h3>
-        <ul>
-            <li><strong>Dandeettii Ittisa Qaamaa (Immunity):</strong> Dhibeen akka nu hin qabneef qaama keenya keessaa ijaara.</li>
-            <li><strong>Side Effect Xiqqaa:</strong> Keemikaalota irraa bilisa ta'uun amanamummaa dabala.</li>
-            <li><strong>Dhibeewwan Walxaxoo:</strong> Dhukkubbii lafee, dhibee onnee, fi sukkaaraa irratti furmaata kenna.</li>
-        </ul>
-    </article>
-
-    <article style="margin-bottom: 50px; border-bottom: 2px solid #1565c0; padding-bottom: 20px;">
-        <h2 style="color: #1565c0;">Addunyaan Jijjiiramaa Jirti; Ati Hoo Eessa Jirta?</h2>
-        <p>Barri nuyi keessa jirru ogummaa fi dandeettii teeknoolojii (Digital Skills) malee tarkaanfachuun baay’ee ulfaataadha. Hojiin ati hojjettu kamiyyuu ta’u, teeknoolojii itti maknaan dandeettiin kee dachaadhaan dabala.</p>
-        
-        <h3>Ogummoota Teeknoolojii Barachuun Maaliif Barbaachise?</h3>
-        <ol>
-            <li><strong>Hojiin Addunyaa Dijitaala’aa Jira:</strong> Interneetii fayyadamuu beekuun dirqama.</li>
-            <li><strong>Yeroo fi Gatii Qusata:</strong> Hojii guyyaa sadii sa’aatii muraasatti xumura.</li>
-            <li><strong>Remote Work:</strong> Bakka jiranii addunyaa wajjin hojjechuu dandeessisa.</li>
-        </ol>
-    </article>
-
-    <article style="margin-bottom: 50px; border-bottom: 2px solid #c2185b; padding-bottom: 20px;">
-        <h2 style="color: #c2185b;">Hormoonota Dhiiraa fi Dubartii: Madaallii Fayyummaa Saalaa</h2>
-        <p>Hormoononni qaama keenya keessatti akka “ergaa gabaasitootaatti” tajaajilu. Dhiiraaf <strong>Testosterone</strong>, dubartiif immoo <strong>Estrogen</strong> hormoonota hunda caalaa murteessoodha.</p>
-        
-        <div style="background-color: #fce4ec; padding: 15px; border-radius: 5px;">
-            <h4>Testosterone Hir’achuu:</h4>
-            <p>Fedhiin walqunnamtii saalaa hir’achuu, dadhabbii, fi irree (muscle) hir’achuu fida. To'achuuf Zinc (Nuugii, Qullubbii) nyaachuu fi hirriiba ga'aa rafuun barbaachisadha.</p>
-        </div>
-        
-        <div style="background-color: #e1f5fe; padding: 15px; border-radius: 5px; margin-top: 10px;">
-            <h4>Laafina Walqunnamtii Saalaa (Erectile Dysfunction):</h4>
-            <p>Sababni isaa dhukkuba onnee, sukkaara, ykn dhiphina sammuu ta'uu danda'a. Furmaataaf: Nyaata madaalawaa (Muuzii, Hababa), sochii qaamaa, fi dhiphina hir'isuun murteessadha.</p>
-        </div>
-    </article>
-
-    <article style="margin-bottom: 50px; border-bottom: 2px solid #e91e63; padding-bottom: 20px;">
-        <h2 style="color: #e91e63;">Kansarii Harmaa fi Of-Ilaaluu</h2>
-        <p>Kansariin harmaa yeroo seelonni harma keessatti argaman haala idilee ala guddachuu fi baay’achuu deemanitti uumama. Mallattooleen: Dhullaa jabaataa, bifa gogaa jijjiiramu, fi dhangala'aa madda harmaatiin ba'udha.</p>
-        
-        <h3>Akkamitti Of-Qoratta?</h3>
-        <p>Ji'a ji'aan guyyaa laguun xumuramee guyyaa 3-5 gidduutti harma kee quba sadiin bifa naannawaatiin sukkuumii qoradhu. Wanti haaraan yoo mul'ate hatattamaan doktoora dubbisi.</p>
-    </article>
-
-    <article style="margin-bottom: 20px;">
-        <h2 style="color: #ff8f00;">Karaa Sirrii Maallaqa Online Irraa Itti Argatanii</h2>
-        <p>Interneetii madda galii guddaadha. Karaawwan dhugaa: Freelancing (Upwork, Fiverr), Affiliate Marketing, fi E-commerce (Shopify/Dropshipping) dha. Mallattooleen sobaa: "Maallaqa duraan dursee kaffali" fi "Hojii malee maallaqa baay'ee" kan jedhanidha.</p>
-    </article>
-    <article style="margin-bottom: 50px; border-bottom: 2px solid #6a1b9a; padding-bottom: 20px;">
-        <h2 style="color: #6a1b9a;">Habasudaa (Habbat al-Sawda): Akka Ogummaa Daawud al-Antakiitti</h2>
-        <p style="font-size: 0.9em; color: #666;">Maxxansame: Ebla 30, 2026</p>
-        
-        <p>Kitaaba beekamaa <em>"Tadhkirat Dawud al-Antaki"</em> keessatti, Habasudaan qoricha dhibeewwan hedduu wal'aanuuf tajaajilu jedhamee bal'inaan ibsameera. Beekumsi kun waggoota dhibba hedduuf itti fayyadamaa kan tureedha.</p>
-
-        <div style="background-color: #f3e5f5; padding: 15px; border-radius: 8px; margin: 20px 0;">
-            <h4 style="margin-top: 0; color: #4a148c;">Faayidaalee Ijoo Caqasaman:</h4>
-            <ul style="list-style-type: circle; padding-left: 20px;">
-                <li><strong>Sirna Hargansuu:</strong> Qufaa cimaa fi asmii wal'aanuuf mirmirsa isaa harganuun akka furmaata ta'e ni gorfama.</li>
-                <li><strong>Fayyaa Garaa:</strong> Qilleensa garaa keessaa baasuu fi raammoo garaa balleessuuf humna guddaa qaba.</li>
-                <li><strong>Madaallii Hormoonii:</strong> Dubartoota laguu irratti rakkoo qabaniif madaallii eeguu fi aannan harmaa dabaluuf ni gargaara.</li>
-                <li><strong>Dhukkubbii Mataa:</strong> Zayita isaa mataa bowwuu fi miigireenii hir'isuuf dibata taasisuun ni danda'ama.</li>
-                <li><strong>Fayyaa Gogaa:</strong> Madaa, cittoo, fi rifeensa harca'u ittisuuf qabeenya guddaa of keessaa qaba.</li>
-            </ul>
-        </div>
-
-        <div style="border: 1px dashed #6a1b9a; padding: 10px; font-size: 0.95em;">
-            <strong>Akkaataa Fayyadamaa:</strong> Akka kitaabichatti, Habasudaan baay'ee yeroo jalqabaaf yoo dhimma itti baanu <strong>Gaggaabaa (Honey)</strong> wajjin makamee nyaatama.
-        </div>
-
-        <p style="font-style: italic; background: #fff3e0; padding: 10px; border-left: 5px solid #ffb300; margin-top: 15px;">
-            <strong>Hubachiisa:</strong> Odeeffannoon kun madda seenaa fi aadaa irraa kan fudhatamedha. Fayyadama kee keessatti ogeessa fayyaa mariisifachuun dirqama.
-        </p>
-    </article>
-    <article style="margin-bottom: 50px; border-bottom: 2px solid #ef6c00; padding-bottom: 20px;">
-        <h2 style="color: #ef6c00;">Teeknoolojii Qonnaa: Faayidaa Drip Irrigation fi Koodii</h2>
-        <p style="font-size: 0.9em; color: #666;">Maxxansame: Ebla 30, 2026</p>
-        
-        <p>Qonni ammayyaa bishaan qusachuu fi oomisha dabaluu irratti hundaa'a. "Drip Irrigation" (jallisii bishaan dhibbee) teeknoolojii bishaan xiqqoodhaan lafa bal'aa misoomsuuf gargaarudha.</p>
-
-        <div style="background-color: #fff3e0; padding: 15px; border-radius: 8px; margin: 20px 0;">
-            <h4 style="margin-top: 0; color: #e65100;">Maaliif Teeknoolojii Fayyadamna?</h4>
-            <ul style="list-style-type: disc; padding-left: 20px;">
-                <li><strong>Bishaan Qusachuu:</strong> Bishaan kallaattiin hunda hundee biqiltuutti waan dhangala'uuf %50-70 qusata.</li>
-                <li><strong>Automation:</strong> Sensor-oota fayyadamuun yeroo lafti gogutti ofumaan bishaan akka banamu gochuun ni danda'ama.</li>
-                <li><strong>Oomisha Dabaluu:</strong> Biqiltuun hundi bishaan fi xumura wal-qixxaataa waan argataniif oomishti ni dabala.</li>
-            </ul>
-        </div>
-
-        <p>Nutis akka <strong>Software Developer</strong>-tti, koodii Python ykn JavaScript fayyadamnee moodeela bishaan kallaattiin to'atu hojjechuun ni danda'ama. Kunis "Smart Farming" jedhamuun beekama.</p>
-    </article>
-    <article style="margin-bottom: 50px; border-bottom: 2px solid #1976d2; padding-bottom: 20px;">
-        <h2 style="color: #1976d2;">Akkaataa Namni Haaraa Coding Eegaluu Danda'u</h2>
-        <p style="font-size: 0.9em; color: #666;">Maxxansame: Ebla 30, 2026</p>
-        
-        <p>Coding barachuun afaan haaraa dubbatamu barachuu wajjin wal-fakkata. Addunyaa dijitaalaa har'aa keessatti ogummaan kun furtuu milkaa'inaati.</p>
-
-        <div style="background-color: #e3f2fd; padding: 15px; border-radius: 8px; margin: 20px 0;">
-            <h4 style="margin-top: 0; color: #0d47a1;">Tarkaanfiiwwan Jalqabaa:</h4>
-            <ol style="padding-left: 20px;">
-                <li><strong>Afaan Saganteessaa (Language) Filadhu:</strong> Jalqaba irratti Python ykn JavaScript barachuun salphaadha.</li>
-                <li><strong>Bu'ura Isaa Baradhu:</strong> Variables, Loops, fi Functions maali akka ta'an adda baafadhu.</li>
-                <li><strong>Project Xiqqoo Hojjedhu:</strong> Fakkeenyaaf, Calculator ykn Weebsaayitii salphaa hojjechuun dandeettii kee gabbisi.</li>
-                <li><strong>Git fi GitHub Fayyadami:</strong> Koodii kee "Save" gochuu fi namoota biroo wajjin hojjechuuf GitHub barachuun murteessaadha.</li>
-            </ol>
-        </div>
-
-        <p>Software Engineering jechuun koodii barreessuu qofa osoo hin taane, rakkoo hawaasaa hiikuudha. Fakkeenyaaf, koodii fayyadamnee rakkoo qonnaa ykn fayyaa hiikuu dandeenya.</p>
-        
-        <p style="background: #e8f5e9; padding: 10px; border-radius: 5px; color: #2e7d32;">
-            <strong>Gorsa:</strong> Guyyaa guyyaatti sa'aatii tokko qofa yoo shaakalte, ji'oota muraasa keessatti jijjiirama guddaa argita!
-        </p>
-    </article>
-
-</div>
-
     <div id="result" class="result-card">
         <h3 id="resTitle"></h3>
         <p id="resDesc"></p>
+    </div>
+
+    <div style="margin-top: 40px; padding: 10px; line-height: 1.8; color: #333;">
+
+        <article>
+            <h2 style="color: #2e7d32;">Qoricha Aadaa: Humna Durii</h2>
+            <p>Addunyaan keenya gara dhaloota teeknoolojii ammayyaatti yoo ceetu...</p>
+            </article>
+
+        <p><em>Barreeffamoota kee warra kaan (Habasudaa, Coding, kkf) hunda koodii kee isa duraa irraa 'copy' gochuun as keessa galchuu dandeessa.</em></p>
+
     </div>
 </div>
 
@@ -172,7 +61,7 @@
     };
 
     function barbaadi() {
-        let maqaa = document.getElementById('medName').value.toLowerCase();
+        let maqaa = document.getElementById('medName').value.toLowerCase().trim();
         let resultDiv = document.getElementById('result');
         let resTitle = document.getElementById('resTitle');
         let resDesc = document.getElementById('resDesc');
