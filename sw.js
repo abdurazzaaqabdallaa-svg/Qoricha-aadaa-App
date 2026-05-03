@@ -17,3 +17,26 @@ self.addEventListener('fetch', event => {
     caches.match(event.request).then(response => response || fetch(event.request))
   );
 });
+const cacheName = 'qoricha-cache-v1';
+const assets = [
+  '/',
+  '/index.html',
+  '/manifest.json',
+  '/icon-512.png'
+];
+
+self.addEventListener('install', evt => {
+  evt.waitUntil(
+    caches.open(cacheName).then(cache => {
+      cache.addAll(assets);
+    })
+  );
+});
+
+self.addEventListener('fetch', evt => {
+  evt.respondWith(
+    caches.match(evt.request).then(rec => {
+      return rec || fetch(evt.request);
+    })
+  );
+});
