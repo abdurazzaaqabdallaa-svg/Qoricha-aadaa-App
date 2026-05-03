@@ -3,167 +3,230 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Qoricha Aadaa App</title>
+    <title>Qoricha Aadaa - Beekumsa Oromoo</title>
     
+    <!-- Google Ads (Kan kee) -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2172834430426530" crossorigin="anonymous"></script>
     
     <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" href="icon-512.png">
 
     <style>
-        body { font-family: sans-serif; background-color: #f4f9f4; color: #2d5a27; padding: 20px; }
-        .container { max-width: 500px; margin: auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
-        h1 { text-align: center; color: #1b4332; }
-        input, button { width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid #ccc; box-sizing: border-box; }
-        button { background-color: #2d5a27; color: white; cursor: pointer; border: none; }
-        button:hover { background-color: #40916c; }
-        .result-card { background: #e9f5db; padding: 15px; border-left: 5px solid #2d5a27; margin-top: 20px; display: none; }
-        article { margin-bottom: 40px; } /* Iddoo dabalataa barreeffama gidduuf */
-    </style> <script>
-      // Service Worker Galmeessuu (Sirreeffama)
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-          navigator.serviceWorker.register('sw.js');
-        });
-      }
-    </script>
-    <style>
-    :root {
-        --primary-color: #2e7d32; /* Magariisa qoricha aadaa */
-        --secondary-color: #f1f8e9;
-        --text-color: #333;
-    }
+        :root {
+            --primary: #1b4332;
+            --accent: #2d6a4f;
+            --light: #f4f9f4;
+            --white: #ffffff;
+        }
 
-    body {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background-color: #f4f4f9;
-        margin: 0;
-        padding: 0;
-        color: var(--text-color);
-    }
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background-color: var(--light);
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
 
-    header {
-        background: var(--primary-color);
-        color: white;
-        padding: 20px;
-        text-align: center;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        border-bottom-left-radius: 20px;
-        border-bottom-right-radius: 20px;
-    }
+        header {
+            background: var(--primary);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
 
-    .search-container {
-        padding: 20px;
-        display: flex;
-        justify-content: center;
-    }
+        .search-section {
+            max-width: 500px;
+            margin: -25px auto 20px;
+            padding: 0 15px;
+        }
 
-    #searchInput {
-        width: 90%;
-        max-width: 400px;
-        padding: 15px;
-        border: 2px solid var(--primary-color);
-        border-radius: 30px;
-        outline: none;
-        font-size: 16px;
-    }
+        #searchInput {
+            width: 100%;
+            padding: 15px 25px;
+            border-radius: 50px;
+            border: none;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            font-size: 16px;
+            outline: none;
+            border: 2px solid transparent;
+            transition: 0.3s;
+        }
 
-    .container {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 20px;
-        padding: 20px;
-    }
+        #searchInput:focus {
+            border-color: var(--accent);
+        }
 
-    .card {
-        background: white;
-        border-radius: 15px;
-        padding: 20px;
-        box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-        transition: 0.3s;
-        border-left: 5px solid var(--primary-color);
-    }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
 
-    .card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-    }
+        /* Dizaayinii Card Biqiltuu */
+        .biqiltuu-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 8px solid var(--accent);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+        }
 
-    .card h3 {
-        color: var(--primary-color);
-        margin-top: 0;
-    }
+        .biqiltuu-card:hover {
+            transform: scale(1.02);
+        }
 
-    .tag {
-        display: inline-block;
-        background: var(--secondary-color);
-        color: var(--primary-color);
-        padding: 5px 10px;
-        border-radius: 5px;
-        font-size: 12px;
-        font-weight: bold;
-    }
+        .biqiltuu-card h2 {
+            color: var(--primary);
+            margin-top: 0;
+            font-size: 1.4rem;
+        }
+
+        .tag {
+            background: #e9f5db;
+            color: var(--primary);
+            padding: 4px 10px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .info-text {
+            line-height: 1.6;
+            font-size: 15px;
+        }
+
+        /* Kutaa Barreeffama Seenaa */
+        .seenaa-box {
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 15px;
+            margin-top: 40px;
+            border: 1px solid #ddd;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 30px;
+            color: #777;
+            font-size: 0.9rem;
+        }
+
+        .no-result {
+            text-align: center;
+            color: #999;
+            margin-top: 30px;
+        }
     </style>
 </head>
 <body>
 
+<header>
+    <h1>Qoricha Aadaa App</h1>
+    <p>Beekumsa Biqiltoota Oromoo - PWA v1.0</p>
+</header>
+
+<div class="search-section">
+    <input type="text" id="searchInput" placeholder="Maqaa biqiltuu barbaadi (Fkn: Heexoo)..." onkeyup="barbaadiBiqiltuu()">
+</div>
+
 <div class="container">
-    <h1>Qoricha Aadaa</h1>
-    <p>Maqaa biqiltuu barreessi:</p>
-    <input type="text" id="medName" placeholder="Fkn: Damakesee, Qeeltoo...">
-    <button onclick="barbaadi()">Faayidaa Barbaadi</button>
     
-    <div id="result" class="result-card">
-        <h3 id="resTitle"></h3>
-        <p id="resDesc"></p>
+    <!-- Bakka ragaan biqiltootaa itti mul'atu -->
+    <div id="biqiltuuList">
+        <!-- JavaScript-tu asitti guuta -->
     </div>
 
-    <div style="margin-top: 40px; padding: 10px; line-height: 1.8; color: #333;">
+    <!-- Kutaa Barreeffamaa Dabalataa -->
+    <div class="seenaa-box">
+        <h2 style="color: var(--primary);">Aadaa fi Teeknoolojii</h2>
+        <p>Qorichi aadaa hunda keenya biratti dhalootaa dhalootatti darbaa kan dhufe beekumsa uumamaati. Appilikeeshiniin kun immoo beekumsa sana karaa ammayyaawaan kuusuuf uumame.</p>
+        <p><i>Bakka kanaatti barreeffama kee dabalataa (Coding, Habasudaa kkf) itti fufuu dandeessa.</i></p>
+    </div>
 
-        <article>
-            <h2 style="color: #2e7d32;">Qoricha Aadaa: Humna Durii</h2>
-            <p>Addunyaan keenya gara dhaloota teeknoolojii ammayyaatti yoo ceetu...</p>
-            </article>
-
-        <p><em>Barreeffamoota kee warra kaan (Habasudaa, Coding, kkf) hunda koodii kee isa duraa irraa 'copy' gochuun as keessa galchuu dandeessa.</em></p>
-
+    <div class="footer">
+        &copy; 2024 Abdurazzaaq Abdallaa. Made with ❤️ for Oromoo Culture.
     </div>
 </div>
 
 <script>
-    const qorichoota = {
-        "damakesee": "Qufaa fi dhukkubbii mataatiif tajaajila.",
-        "qeeltoo": "Madaa gogaa fi rifeensaaf gaariidha.",
-        "hiddii": "Dhukkubbii ilkaaniif akka qorichaatti tajaajila.",
-        "adjoo": "Dhukkubbii garaa fi dhibee kosiitiif qorichadha."
-    };
+    // Ragaalee Biqiltootaa (Database kee)
+    const biqiltoota = [
+        {
+            maqaa: "Damakasee",
+            faayidaa: "Qufaa, Mata-dhukkubbi fi Ho'a qaamaa (Fever).",
+            qophii: "Baala isaa sukkuumanii funfaachuu ykn bishaanitti makuun dhuguu."
+        },
+        {
+            maqaa: "Heexoo",
+            faayidaa: "Raammoo garaa (Tapeworm) baasuuf gaariidha.",
+            qophii: "Daraaraa isaa gogsanii erga daakamee booda bishaanitti makuun dhugama."
+        },
+        {
+            maqaa: "Hiddii",
+            faayidaa: "Dhukkubbii ilkaanii fi Itootta (Tonsillitis).",
+            qophii: "Firiisafi hiddii isaa mirmirsuun ykn affeelanii itti dhiitachuun tajaajila."
+        },
+        {
+            maqaa: "Sensel",
+            faayidaa: "Dhibee Tiruu fi qufaa garaa keessaa.",
+            qophii: "Baala isaa cunfanii bishaanitti makuun yeroo 3 dhugama."
+        },
+        {
+            maqaa: "Qeeltoo",
+            faayidaa: "Madaa gogaa fi dhibee rifeensaaf.",
+            qophii: "Cunfaa baala isaa madaa irratti dibuu."
+        }
+    ];
 
-    function barbaadi() {
-        let maqaa = document.getElementById('medName').value.toLowerCase().trim();
-        let resultDiv = document.getElementById('result');
-        let resTitle = document.getElementById('resTitle');
-        let resDesc = document.getElementById('resDesc');
+    function agarsiisiHunda(data) {
+        const listArea = document.getElementById('biqiltuuList');
+        listArea.innerHTML = '';
 
-        if (qorichoota[maqaa]) {
-            resultDiv.style.display = "block";
-            resTitle.innerText = maqaa.toUpperCase();
-            resDesc.innerText = qorichoota[maqaa];
-        } else {
-            alert("Odeeffannoon biqiltuu kanaa hin jiru. Maaloo lammata yaali!");
+        if(data.length === 0) {
+            listArea.innerHTML = `<p class="no-result">Odeeffannoon biqiltuu kanaa hin jiru. Maaloo lammata yaali!</p>`;
+            return;
         }
 
-}
-    
-    code
-Html
-<!-- Bakka Barbaachaa -->
-<div class="search-container">
-    <input type="text" id="searchInput" placeholder="Maqaa biqiltuu barbaadi..." onkeyup="barbaadiBiqiltuu()">
-</div>
+        data.forEach(item => {
+            const card = `
+                <div class="biqiltuu-card">
+                    <span class="tag">Qoricha Aadaa</span>
+                    <h2>${item.maqaa}</h2>
+                    <div class="info-text">
+                        <p><strong>💡 Faayidaa:</strong> ${item.faayidaa}</p>
+                        <p><strong>🌿 Haala Qophii:</strong> ${item.qophii}</p>
+                    </div>
+                </div>
+            `;
+            listArea.innerHTML += card;
+        });
+    }
 
-<!-- Bakka ragaan biqiltootaa itti dhiyaatu -->
-<div id="biqiltuuList" class="container">
-    <!-- Koodiin JavaScript ragaa asitti guuta -->
-</div>
+    function barbaadiBiqiltuu() {
+        const query = document.getElementById('searchInput').value.toLowerCase().trim();
+        const filtered = biqiltoota.filter(b => 
+            b.maqaa.toLowerCase().includes(query) || 
+            b.faayidaa.toLowerCase().includes(query)
+        );
+        agarsiisiHunda(filtered);
+    }
+
+    // Yeroo Appiin banamu hunda jalqabatti agarsiisi
+    window.onload = () => agarsiisiHunda(biqiltoota);
+
+    // PWA Service Worker
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('sw.js');
+        });
+    }
 </script>
 
 </body>
