@@ -227,6 +227,184 @@
             navigator.serviceWorker.register('sw.js');
         });
     }
+    // Database Biqiltoota Qoricha Aadaa Oromoo - 35 items
+const biqiltoota = [
+    {
+        maqaa: "Damakasee",
+        faayidaa: "Qufaa, Mata-dhukkubbii, dhibee ho'a qaamaa (fever) fi infeekshinii adda addaa yaaluuf tajaajila [1.3].",
+        qophii: "Baala isaa qulqulleessanii sukkuumanii foolii isaa funfaachuu ykn bishaan ho'aatti makuun dhuguudha."
+    },
+    {
+        maqaa: "Heexoo",
+        faayidaa: "Raammoo garaa (Tapeworm) fi rakkoota keessoo garaa mara balleessuuf gaariidha [1.6].",
+        qophii: "Daraaraa isaa gogsanii daakuun erga qophaa'ee booda aannan ykn bishaan damma qabuun makuun ganama dhugama."
+    },
+    {
+        maqaa: "Hiddii",
+        faayidaa: "Dhukkubbii ilkaanii fi Itootta (tonsillitis) dabalatee madaa qoonqoo keessaa yaala [1.6].",
+        qophii: "Firiisafi hiddii isaa erga affeelanii booda aara isaa harganuu ykn ittiin dhiitachuu."
+    },
+    {
+        maqaa: "Sensel (Sinsila)",
+        faayidaa: "Dhibee tiruu, dhukkubbi dugdaa, qoricha cabaa fi qufaa cimaa garaa keessa jiruuf muxxee dha [1.6, 1.7].",
+        qophii: "Baala isaa biddeeranii ykn bulbulaan qopheessanii guyyaatti yeroo sadi dhugama."
+    },
+    {
+        maqaa: "Qeeltoo (Aloe Vera)",
+        faayidaa: "Madaa gogaa, gubaa ibiddaa, dhukkubbi keessoo garaa fi ragaa qoricha rifeensaa [1.3, 1.6].",
+        qophii: "Dhangala'aa jeliidhaan madaa irratti dibuu ykn bishaanitti makuun sirna bulleensaa gargaaruun tajaajila."
+    },
+    {
+        maqaa: "Adjoo",
+        faayidaa: "Ciniinsu garaa, qufaa cimaa fi infeekshinoota qaamaa garaagaraatiif ni fayyada.",
+        qophii: "Baala isaa bishaanitti affeeluun akka shaayitti dhugama."
+    },
+    {
+        maqaa: "Ejersa",
+        faayidaa: "Madaa qoonqoo, tonsil (itootta), afaan foolii badu dhowwuuf fi dhibee gogaatiif bareedaa dha.",
+        qophii: "Furtuu baala isaa affeelanii dhiqachuun ykn damee isaa qolli qullaa akka rigaatti gargaara."
+    },
+    {
+        maqaa: "Xeenaaddam",
+        faayidaa: "Ciniinsu gurguddaa, bokokuu garaa fi dhukkubbii ijoollee xis xiqqoo dhaaba.",
+        qophii: "Damee xiqqoo cabsanii buna keessa buusuun ykn shaayiin dhandhamuu."
+    },
+    {
+        maqaa: "Eebicha",
+        faayidaa: "Dhibee malariyaa, raammoo garaa fi dhukkubbii onnee hiri'isuuf gaariidha.",
+        qophii: "Baala isaa erga sirriitti bulbulaan dhiqatamee booda cunfaa isaa qullaa dhandhamuu."
+    },
+    {
+        maqaa: "Waddeessa",
+        faayidaa: "Madaa foonii (cittoo), dhukkubbi mataa, fi balaa madaa dhibee foon kosiitiif [1.3, 1.6].",
+        qophii: "Qola jirma isaa daakanii ykn bulbula isaa bakka dhukkubu irratti dibuun tajaajila."
+    },
+    {
+        maqaa: "Kombolcha",
+        faayidaa: "Dhukkubbii madaa, garaa ciniinnaa fi dhibee tiruutiif bareeda dha [1.6].",
+        qophii: "Hiddii isaa daakuun ykn affeeluun dhangala'aa isaa dhuguudha."
+    },
+    {
+        maqaa: "Birbira",
+        faayidaa: "Qoricha summii nafa keessaa baasuu, madaa cite dhaabuuf.",
+        qophii: "Qola isaa jidduudhaan bulluquu fi dhangala'aa ittiin madaa qulleessuu."
+    },
+    {
+        maqaa: "Sunqoo",
+        faayidaa: "Sirna bulleensa nyaataa gargaaruu, caba foonii hidhuu fi sukkaar dhibee hiri'isuuf tajaajila.",
+        qophii: "Sanyii isaa bishaan keessa bulchanii daakuun akka mukummukkeetti soorachuudha."
+    },
+    {
+        maqaa: "Qullubbii Adii",
+        faayidaa: "Dhiibbaa dhiigaa hir’isuu, qufaa, fi dhibee infeekshinoota bakteeriyaa dhabamsiisa.",
+        qophii: "Qullummaan isaa nyaataa wajjin soorachuun ykn caccabsanii dammaan makuun nyaachuudha."
+    },
+    {
+        maqaa: "Gidimbi",
+        faayidaa: "Qufaa onnee keessaa qabuuf fi haala hargansuu sammuu sirreessuuf tajaajila.",
+        qophii: "Baala isaa qopheessanii akka shaayitti affeelanii bishaan ho'aa dhugama."
+    },
+    {
+        maqaa: "Bakkannisa",
+        faayidaa: "Infeekshinii gogaa, cittoo madaa'e fi madaa gogaa yaaluuf muxxee dha.",
+        qophii: "Baala isaa buluun akka madaan dhidhamutti qullaatti dhiqachuudha."
+    },
+    {
+        maqaa: "Habasudaa Gurraacha",
+        faayidaa: "Qoricha dhibee kumaaf tajaajilu; hargansuu gargaaruu, infeekshinii madaa dhowwa.",
+        qophii: "Zayitii isaa dammaan makuun ykn sanyii isaa buluquun ganama tajaajilamuudha."
+    },
+    {
+        maqaa: "Somboo",
+        faayidaa: "Balaawwan madaa itichuu fi ciniinnaa onnee hir'isuu dandeessisa [1.6, 1.7].",
+        qophii: "Hiddii fi qola isaa bubuusuun, akka qoricha madaatti madaa'e irratti dibama."
+    },
+    {
+        maqaa: "Ulmaa",
+        faayidaa: "Yaala ciniinsu dhiiga gahu dhabamsiisuuf fi dhukkubbii naannoo rimeessaa dhowwa.",
+        qophii: "Damee jidduu isaa jigeessiin gubanii aarri isaa yaalamtootaaf gumaachiisuu."
+    },
+    {
+        maqaa: "Alaltuu",
+        faayidaa: "Ho'a qaamaa hiri'isuuf (Aspirin aadaa), fi dhukkubbi mataatiif.",
+        qophii: "Qola muka isaa bubbuusuun bishaan keessatti boil godhanii dhugama."
+    },
+    {
+        maqaa: "Qullubbii Diimaa",
+        faayidaa: "Dhukkubbii madaa (infection) qubaa irratti uumamu fi qoricha ijaa.",
+        qophii: "Gama jalaan gubanii yeroo ho'u bakka dhukkubu sana irratti hidhuun itti fayyadamu."
+    },
+    {
+        maqaa: "Muka Arbaa",
+        faayidaa: "Dhukkubbi qoonqoo, goggoga afaanii fi dhibee itoottaaf.",
+        qophii: "Baala ykn qola isaa bulluquun qoonqoon mirmirsuun fayyadamuu."
+    },
+    {
+        maqaa: "Gooluguba",
+        faayidaa: "Ciniinnaa garaa bal'aa dhabamsiisa fi gadi teessisa (diarrhea) dhaaba.",
+        qophii: "Hiddii isaa bubbuusuun akka qullaatti dhangala'aa isaa dhandhamuudha."
+    },
+    {
+        maqaa: "Loomii",
+        faayidaa: "Ho'a qaamaa xiqqeessa, qufaa dhaaba fi dhandhamoo foon kosiitiif gargaara.",
+        qophii: "Cunfaa isaa bishaan ho'aa fi damma qabuun makuun yeroo 2 dhugama."
+    },
+    {
+        maqaa: "Makaroo / Moringa",
+        faayidaa: "Vayitaaminii baay’ee qaba; dhiibbaa dhiigaa, sukkaar-dhibee, fi qaama dadhabe gargaara.",
+        qophii: "Baala gogse daakuun akka shaayitti ykn nyaatatti makuun soorachuu."
+    },
+    {
+        maqaa: "Kaamoomila",
+        faayidaa: "Boqonnaa sammuu, hirriba bareedaa fi dhibee garaa ciniinnaa.",
+        qophii: "Daraaraa isaa bishaanitti bulbulaan dhandhamuun keessa galuu."
+    },
+    {
+        maqaa: "Hancufa (Locho)",
+        faayidaa: "Madaa cite hidhuu, foon cite suphuuf ni gargaara [1.6].",
+        qophii: "Zamburuu ykn cunfaa baala isaa caba irratti sirriitti fassalan."
+    },
+    {
+        maqaa: "Ancootee",
+        faayidaa: "Lafee jabeessa, caba lafee ykn foonii saffisaan fayyisa.",
+        qophii: "Hiddii isaa erga bilcheessanii booda waan akka cuukoo dabalatanii sooratu."
+    },
+    {
+        maqaa: "Reejjii",
+        faayidaa: "Madaa buqqisii dhibeef gosa kamiyyuu akka lafeetti jabeessuu [1.7].",
+        qophii: "Baala isaa hiddiidhaan sukkuumanii madaa irratti uffisuu dha."
+    },
+    {
+        maqaa: "Mixiri",
+        faayidaa: "Dhukkubbii ilkaanii fi gogaa qoorse dhabamsiisuuf fayyada.",
+        qophii: "Damee qollisaa bulluqanii dhiqachuu ykn funyaachuu."
+    },
+    {
+        maqaa: "Abbayya",
+        faayidaa: "Infeekshinii keessoo fi garaa yaasuu dhaabuun (Anti-diarrhea) gargaara.",
+        qophii: "Firiisafi baala isaa bilcheessanii ganama ganama fudhatu."
+    },
+    {
+        maqaa: "Garbii",
+        faayidaa: "Garaa yaasuu dhaabuu (Anti-diarrhea), dhiiga garmalee madaa'un dhowwa [1.3].",
+        qophii: "Qola jirma isaa bulluquun akka bishaan ho'aatti dhandhamuun itti fayyadamuu."
+    },
+    {
+        maqaa: "Sunfura",
+        faayidaa: "Infeekshinoota ujummoo qoonqoo keessa jiru baasuu.",
+        qophii: "Damee baala isaa hiddinaan buluqun akka qorichaatti dhugama."
+    },
+    {
+        maqaa: "Dhangaggoo",
+        faayidaa: "Funyaan dhiigu dhowwa fi madaa gogaa.",
+        qophii: "Baala isaa sukkuumanii bishaan isaa funyaan keessa kuusuun tajaajilama."
+    },
+    {
+        maqaa: "Qunxee",
+        faayidaa: "Ciniinnaa maraa fi sirna hargansuu onnee irratti dhufu.",
+        qophii: "Aara qola isaa qulqulleessani gubanii funfaachuun fudhachuudha."
+    }
+];
 </script>
 
 </body>
