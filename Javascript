@@ -1,0 +1,62 @@
+const biqiltoota = [
+    {
+        maqaa: "Heexoo",
+        saayinsii: "Hagenia abyssinica",
+        faayidaa: "Raammoo garaa (Tapeworm) baasuuf gargaara.",
+        qophii: "Daraaraa isaa gogsanii erga daakamee booda bishaan ykn aannaniin dhugama."
+    },
+    {
+        maqaa: "Damakasee",
+        saayinsii: "Ocimum lamiifolium",
+        faayidaa: "Matooma, Qufaa fi ho'a qaamaa (fever) hiri'isuuf.",
+        qophii: "Baala isaa sukkuumanii funfaachuu ykn bishaanitti makuun dhuguu."
+    },
+    {
+        maqaa: "Sensel (Sinsila)",
+        saayinsii: "Justicia schimperiana",
+        faayidaa: "Dhibee Tiruu, Dhullaa fi qufaa cimaaf.",
+        qophii: "Baala isaa biddeeranii bishaan isaa qullaa dhuguu."
+    },
+    {
+        maqaa: "Xeenaaddaam",
+        saayinsii: "Ruta graveolens",
+        faayidaa: "Dhukkubbi garaa fi bokokuu garaa dhowwa.",
+        qophii: "Buna keessa buusanii ykn qullaa isaa bishaanitti makuun dhuguu."
+    },
+    {
+        maqaa: "Hiddii",
+        saayinsii: "Solanum incanum",
+        faayidaa: "Dhukkubbii ilkaanii fi itootta (tonsillitis).",
+        qophii: "Hunda isaa affeelanii foolii isaa funfaachuu ykn hiddii isaa mirmirsuu."
+    }
+];
+
+function agarsiisiBiqiltoota(data) {
+    const listContainer = document.getElementById('biqiltuuList');
+    listContainer.innerHTML = ''; 
+
+    data.forEach(biqiltuu => {
+        const card = `
+            <div class="card">
+                <h3>${biqiltuu.maqaa}</h3>
+                <p><strong>Maqaa Saayinsii:</strong> <i>${biqiltuu.saayinsii}</i></p>
+                <p><strong>Faayidaa:</strong> ${biqiltuu.faayidaa}</p>
+                <p><strong>Haala Ittifayyadamaa:</strong> ${biqiltuu.qophii}</p>
+            </div>
+        `;
+        listContainer.innerHTML += card;
+    });
+}
+
+// Hojii Barbaachaa (Search)
+function barbaadiBiqiltuu() {
+    const query = document.getElementById('searchInput').value.toLowerCase();
+    const filtered = biqiltoota.filter(b => 
+        b.maqaa.toLowerCase().includes(query) || 
+        b.faayidaa.toLowerCase().includes(query)
+    );
+    agarsiisiBiqiltoota(filtered);
+}
+
+// Yeroo Appiin banamu jalqaba hunda agarsiisi
+window.onload = () => agarsiisiBiqiltoota(biqiltoota);
