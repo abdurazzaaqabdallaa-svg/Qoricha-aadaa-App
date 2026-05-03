@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="om">
 <head>
@@ -5,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Qoricha Aadaa - Beekumsa Oromoo</title>
     
-    <!-- Google Ads (Kan kee) -->
+    <!-- Google Ads -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2172834430426530" crossorigin="anonymous"></script>
     
     <link rel="manifest" href="manifest.json">
@@ -30,7 +31,7 @@
         header {
             background: var(--primary);
             color: white;
-            padding: 30px 20px;
+            padding: 40px 20px;
             text-align: center;
             border-bottom-left-radius: 30px;
             border-bottom-right-radius: 30px;
@@ -45,12 +46,13 @@
 
         #searchInput {
             width: 100%;
-            padding: 15px 25px;
+            padding: 15px 20px;
             border-radius: 50px;
             border: none;
             box-shadow: 0 8px 20px rgba(0,0,0,0.1);
             font-size: 16px;
             outline: none;
+            box-sizing: border-box;
             border: 2px solid transparent;
             transition: 0.3s;
         }
@@ -65,7 +67,6 @@
             padding: 20px;
         }
 
-        /* Dizaayinii Card Biqiltuu */
         .biqiltuu-card {
             background: var(--white);
             border-radius: 20px;
@@ -77,86 +78,25 @@
         }
 
         .biqiltuu-card:hover {
-         
-            transform: scale(1.02);
+            transform: translateY(-5px);
         }
 
         .biqiltuu-card h2 {
             color: var(--primary);
             margin-top: 0;
-            font-size: 1.4rem;
-            const biqiltoota = [
-        {
-            maqaa: "Dhangaggoo",
-            faayidaa: "Madaa gogaa, dhukkubbii garaa fi dhibee dhullaa (boils) yaaluuf tajaajila.",
-            qophii: "Hunda isaa affeelanii bishaan isaa dhuguu ykn baala isaa madaa irratti dibuu."
-        },
-        {
-            maqaa: "Damakasee",
-            faayidaa: "Qufaa, Mata-dhukkubbi fi Ho'a qaamaa (Fever).",
-            qophii: "Baala isaa sukkuumanii funfaachuu ykn bishaanitti makuun dhuguu."
-        },
-        {
-            maqaa: "Heexoo",
-            faayidaa: "Raammoo garaa (Tapeworm) baasuuf gaariidha.",
-            qophii: "Daraaraa isaa gogsanii erga daakamee booda bishaanitti makuun dhugama."
-        },
-        {
-            maqaa: "Hiddii",
-            faayidaa: "Dhukkubbii ilkaanii fi Itootta (Tonsillitis).",
-            qophii: "Firiisafi hiddii isaa mirmirsuun ykn affeelanii itti dhiitachuun tajaajila."
-        },
-        {
-            maqaa: "Sensel",
-            faayidaa: "Dhibee Tiruu fi qufaa garaa keessaa.",
-            qophii: "Baala isaa cunfanii bishaanitti makuun yeroo 3 dhugama."
-        },
-        {
-            maqaa: "Ulmaa",
-            faayidaa: "Madaa gogaa fi dhibee ijaa yaaluuf.",
-            qophii: "Baala isaa affeelanii bishaan isaatiin madaa dhiquu."
-        },
-        {
-            maqaa: "Garbii",
-            faayidaa: "Garaa yaasuu (Diarrhea) fi dhukkubbii garaa.",
-            qophii: "Qola isaa affeelanii bishaan isaa dhuguu."
-        },
-        {
-            maqaa: "Ejersa",
-            faayidaa: "Qulqullina ilkaanii fi dhibee garaa keessaa.",
-            qophii: "Rigaa godhatanii fayyadamuu ykn baala isaa affeelanii dhuguu."
-        },
-        {
-            maqaa: "Reejjii",
-            faayidaa: "Dhibee gogaa fi madaa fardaa/beeyladaa.",
-            qophii: "Baala isaa sukkuumanii madaa irratti dibuu."
-        },
-        {
-            maqaa: "Waddeeessa",
-            faayidaa: "Dhukkubbii dugdaa fi buusaa qaamaa.",
-            qophii: "Qola isaa affeelanii bishaan isaa dhuguu."
-        }
-        // Asitti biqiltoota biroo 100 ol itti dabaluu dandeessa...
-    ];
+            font-size: 1.5rem;
         }
 
-        .tag {
-            background: #e9f5db;
-            color: var(--primary);
-            padding: 4px 10px;
-            border-radius: 5px;
-            font-size: 0.8rem;
-            font-weight: bold;
-            display: inline-block;
-            margin-bottom: 10px;
+        .disclaimer {
+            background: #fff3cd;
+            color: #856404;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            border: 1px solid #ffeeba;
         }
 
-        .info-text {
-            line-height: 1.6;
-            font-size: 15px;
-        }
-
-        /* Kutaa Barreeffama Seenaa */
         .seenaa-box {
             background: #ffffff;
             padding: 25px;
@@ -171,47 +111,41 @@
             color: #777;
             font-size: 0.9rem;
         }
-
-        .no-result {
-            text-align: center;
-            color: #999;
-            margin-top: 30px;
-        }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Qoricha Aadaa App</h1>
-    <p>Beekumsa Biqiltoota Oromoo - PWA v1.0</p>
+    <h1>Qoricha Aadaa Oromoo</h1>
+    <p>Madda Beekumsa Wal'aansa Uumamaa</p>
 </header>
 
 <div class="search-section">
-    <input type="text" id="searchInput" placeholder="Maqaa biqiltuu barbaadi (Fkn: Heexoo)..." onkeyup="barbaadiBiqiltuu()">
+    <input type="text" id="searchInput" placeholder="Maqaa biqiltuu ykn dhukkubaa barbaadi..." onkeyup="barbaadiBiqiltuu()">
 </div>
 
 <div class="container">
-    
-    <!-- Bakka ragaan biqiltootaa itti mul'atu -->
+    <div class="disclaimer">
+        <strong>Hubachiisa:</strong> Odeeffannoon kun beekumsa aadaatiif qofa kan qophaa'eedha. Qoricha kamiyyuu fayyadamuun dura ogeessa fayyaa mariisisi.
+    </div>
+
     <div id="biqiltuuList">
         <!-- JavaScript-tu asitti guuta -->
     </div>
 
-    <!-- Kutaa Barreeffamaa Dabalataa -->
     <div class="seenaa-box">
         <h2 style="color: var(--primary);">Aadaa fi Teeknoolojii</h2>
-        <p>Qorichi aadaa hunda keenya biratti dhalootaa dhalootatti darbaa kan dhufe beekumsa uumamaati. Appilikeeshiniin kun immoo beekumsa sana karaa ammayyaawaan kuusuuf uumame.</p>
-        <p><i>Bakka kanaatti barreeffama kee dabalataa (Coding, Habasudaa kkf) itti fufuu dandeessa.</i></p>
+        <p>Qorichi aadaa Oromoo dhalootaa dhalootatti kan darbe beekumsa guddaadha. Appilikeeshiniin kun beekumsa kana haala ammayyaawaan kuusuuf qophaa'e.</p>
     </div>
 
     <div class="footer">
-        &copy; 2024 Abdurazzaaq Abdallaa. Made with ❤️ for Oromoo Culture.
+        &copy; 2024 Abdurazzaaq Abdallaa. <br>
+        Oromoo Traditional Knowledge Base.
     </div>
 </div>
 
 <script>
-    <script>
-    // 1. Ragaalee Biqiltootaa (Database) - Asitti biqiltoota hedduu dabaluu dandeessa
+    // 1. Ragaalee Biqiltootaa (Database Expanded)
     const biqiltoota = [
         {
             maqaa: "Dhangaggoo",
@@ -225,7 +159,7 @@
         },
         {
             maqaa: "Heexoo",
-            faayidaa: "Raammoo garaa (Tapeworm) baasuuf gaariidha.",
+            faayidaa: "Raammoo garaa (Tapeworm/Kosso) baasuuf adda dureedha.",
             qophii: "Daraaraa isaa gogsanii erga daakamee booda bishaanitti makuun dhugama."
         },
         {
@@ -235,42 +169,65 @@
         },
         {
             maqaa: "Sensel",
-            faayidaa: "Dhibee Tiruu fi qufaa garaa keessaa.",
+            faayidaa: "Dhibee Tiruu, qufaa garaa keessaa fi dhibee lafee.",
             qophii: "Baala isaa cunfanii bishaanitti makuun yeroo 3 dhugama."
         },
         {
             maqaa: "Ejersa",
-            faayidaa: "Qulqullina ilkaanii fi dhibee garaa keessaa.",
+            faayidaa: "Qulqullina ilkaanii, dhibee garaa keessaa fi qulqullina meeshaa aannanii.",
             qophii: "Rigaa godhatanii fayyadamuu ykn baala isaa affeelanii dhuguu."
         },
         {
             maqaa: "Waddeessa",
-            faayidaa: "Dhukkubbii dugdaa fi buusaa qaamaa.",
+            faayidaa: "Dhukkubbii dugdaa, buusaa qaamaa fi itita dhiigaa.",
             qophii: "Qola isaa affeelanii bishaan isaa dhuguu."
         },
         {
             maqaa: "Ulmaa",
             faayidaa: "Madaa gogaa fi dhibee ijaa yaaluuf.",
             qophii: "Baala isaa affeelanii bishaan isaatiin madaa dhiquu."
+        },
+        {
+            maqaa: "Abasuda (Gurraacha)",
+            faayidaa: "Infection, dhukkubbii mataa, fi humna dhibee ittisuu qaamaa cimsuuf.",
+            qophii: "Zayita isaa dhuguu ykn firiisun midhaanitti makuun nyaachuu."
+        },
+        {
+            maqaa: "Qullubbii Addii",
+            faayidaa: "Dhiibbaa dhiigaa, qufaa fi dhibee fungus (fanphee).",
+            qophii: "Dhaqunaan nyaata keessa naquu ykn qullaa isaa nyaachuu."
+        },
+        {
+            maqaa: "Kombolcha",
+            faayidaa: "Dhukkubbii garaa (Gastric) fi dhibee mar'ummanii.",
+            qophii: "Hunda isaa affeelanii bishaan isaa dhuguu."
+        },
+        {
+            maqaa: "Zinjibiila",
+            faayidaa: "Mata dhukkubbii, qorra qaamaa fi dhibee qoonqoo.",
+            qophii: "Shayii keessa naquun ykn bishaanitti affeelanii dhuguu."
+        },
+        {
+            maqaa: "Adaamii",
+            faayidaa: "Dhullaa (boils) fi madaa gogaa dhangala'aa qabu.",
+            qophii: "Annan isaa (aanan adaamii) madaa irratti dibuu (of eeggannoon)."
         }
     ];
 
     // 2. Funksishinii Biqiltoota Agarsiisu
     function agarsiisiHunda(data) {
         const listArea = document.getElementById('biqiltuuList');
-        if (!listArea) return; // Yoo id-n kun hin jirre dhaabi
-        
         listArea.innerHTML = '';
 
         if(data.length === 0) {
-            listArea.innerHTML = `<p style="text-align:center; color:red; padding:20px;">Odeeffannoon biqiltuu kanaa hin jiru. Maaloo lammata yaali!</p>`;
+            listArea.innerHTML = `<p style="text-align:center; color:#666; padding:20px;">Maaloo, biqiltuun maqaa kanaan galmaa'e hin jiru.</p>`;
             return;
         }
 
         data.forEach(item => {
             const card = `
-                <div class="biqiltuu-card" style="background:white; border-radius:15px; padding:20px; margin-bottom:15px; border-left:8px solid #2d6a4f; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
-                    <h2 style="color:#1b4332; margin-top:0;">${item.maqaa}</h2>
+                <div class="biqiltuu-card">
+                    <h2>${item.maqaa}</h2>
                     <p><strong>💡 Faayidaa:</strong> ${item.faayidaa}</p>
                     <p><strong>🌿 Haala Qophii:</strong> ${item.qophii}</p>
                 </div>
@@ -283,7 +240,6 @@
     function barbaadiBiqiltuu() {
         const query = document.getElementById('searchInput').value.toLowerCase().trim();
         
-        // Barbaacha (Filter)
         const filtered = biqiltoota.filter(b => 
             b.maqaa.toLowerCase().includes(query) || 
             b.faayidaa.toLowerCase().includes(query)
@@ -292,18 +248,17 @@
         agarsiisiHunda(filtered);
     }
 
-    // 4. Yeroo Appiin banamu hunda jalqabatti agarsiisi
+    // 4. Initial Load
     window.onload = () => {
         agarsiisiHunda(biqiltoota);
     };
 
-    // 5. PWA Service Worker Galmeessuu
+    // 5. PWA Service Worker
     if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
             navigator.serviceWorker.register('sw.js').catch(err => console.log("SW Error: ", err));
         });
     }
-</script>
 </script>
 
 </body>
