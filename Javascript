@@ -1,62 +1,186 @@
-const biqiltoota = [
+const xibbNabawiiData = [
     {
-        maqaa: "Heexoo",
-        saayinsii: "Hagenia abyssinica",
-        faayidaa: "Raammoo garaa (Tapeworm) baasuuf gargaara.",
-        qophii: "Daraaraa isaa gogsanii erga daakamee booda bishaan ykn aannaniin dhugama."
+        maqaa: "Haba-suudaa (Habbat al-Sawda)",
+        faayidaa: "Dhibee du'a malee jiru hundumaaf qoricha madaalawaadha. Dandeettii ittisa qaamaa (Immunity) garmalee jabeessa.",
+        haala: "Zayita isaa qussanii ykn firii isaa dhaananii damma waliin makuun ganama suumii soorachuu."
     },
     {
-        maqaa: "Damakasee",
-        saayinsii: "Ocimum lamiifolium",
-        faayidaa: "Matooma, Qufaa fi ho'a qaamaa (fever) hiri'isuuf.",
-        qophii: "Baala isaa sukkuumanii funfaachuu ykn bishaanitti makuun dhuguu."
+        maqaa: "Qullubbii Adii (Garlic)",
+        faayidaa: "Dhibee qofaa cimaa, infekshinii, roraa qaamaa, fi dhibeewwan raammoo garaa dhabamsiisuuf.",
+        haala: "Kallaattiin bulchesanii damma waliin nyaachuu ykn dafanii nyaatatti makuun soorachuu."
     },
     {
-        maqaa: "Sensel (Sinsila)",
-        saayinsii: "Justicia schimperiana",
-        faayidaa: "Dhibee Tiruu, Dhullaa fi qufaa cimaaf.",
-        qophii: "Baala isaa biddeeranii bishaan isaa qullaa dhuguu."
+        maqaa: "Hulubataa (Fenugreek / Hulba)",
+        faayidaa: "Suga dhiigaa madaaluuf, roraa garaa ballessuuf, fi dubartoota akasumas garaacha ho'isuuf gargaara.",
+        haala: "Firii isaa bishaanitti affeelanii bishaan isaa dhuguu ykn daakuu isaa fayyadamuu."
     },
     {
-        maqaa: "Xeenaaddaam",
-        saayinsii: "Ruta graveolens",
-        faayidaa: "Dhukkubbi garaa fi bokokuu garaa dhowwa.",
-        qophii: "Buna keessa buusanii ykn qullaa isaa bishaanitti makuun dhuguu."
+        maqaa: "Qoonxar / Talbaa (Flaxseed)",
+        faayidaa: "Qufaa cimaa gogsaa ta'e, dhibee handaraafi, fi mar'imaan dhiphachuu irraa ittisa.",
+        haala: "Gogsanii erga daakamee booda bishaan ho'aan makuun ykn affeelanii firii isaa dhuguu."
     },
     {
-        maqaa: "Hiddii",
-        saayinsii: "Solanum incanum",
-        faayidaa: "Dhukkubbii ilkaanii fi itootta (tonsillitis).",
-        qophii: "Hunda isaa affeelanii foolii isaa funfaachuu ykn hiddii isaa mirmirsuu."
+        maqaa: "Shunkurtaa Diimaa (Onion)",
+        faayidaa: "Summii bishaanii fi qilleensaa ittisuu, garaacha xurii irraa qulqulleessuu fi baakteriyaa ajjeesuuf.",
+        haala: "Daddabalanii nyaata keessatti affeelanii soorachuun ykn cuunfaa isaa zayitaan makuu."
+    },
+    {
+        maqaa: "Rummaana (Pomegranate)",
+        faayidaa: "Garaacha qulqulleessuuf, keessoo garaa gubaa dhowwuu, fi onnee dadhabe jabeessuuf.",
+        haala: "Fuduraa kana kallaattiin firiishee nyaachuu ykn cuunfaa isaa qulqulluu dhuguun."
+    },
+    {
+        maqaa: "Timira (Dates)",
+        faayidaa: "Humna fi kalsiyum qaamaa kennuuf, garaacha jabeessuu, fi summii garmalee qaama keessaa baasuuf.",
+        haala: "Ganama suumii (empty stomach) lakkoofsa fatihiin (7) nyaachuun akkaan gorfama."
+    },
+    {
+        maqaa: "Tamiirul Hindii (Tamarind)",
+        faayidaa: "Garaacha jiisuu, dheebuu dhowwuu, fi dhibee dhiita'insa qaamaa (inflammation) hir'isuuf.",
+        haala: "Bishaan qorran keessa bulchanii cuunfaa isaa qullaa ykn soogidda xiqqoon dhuguu."
+    },
+    {
+        maqaa: "Jinjiibila (Ginger)",
+        faayidaa: "Garaacha ho'isuuf, qilleensa (gas) garaa baasuuf, fi balghama sammuu ulfaatessu sassaabuuf.",
+        haala: "Nyaata keessatti makuun ykn affeelanii bishaan isaa bifa shayiitiin dhuguun."
+    },
+    {
+        maqaa: "Qaranfulii (Cloves)",
+        faayidaa: "Dhukkubbii ilkaanii hir'isuu, mudhii fi jilba jabeessu, fi foolii afanii miidhagsuuf.",
+        haala: "Ilkaan jidduu qabuun ykn affeelanii bishaan isaatiin afaan lallaaqachuun."
+    },
+    {
+        maqaa: "Quusxiul Hindii (Indian Costus)",
+        faayidaa: "Dhukkubbii qoonqoo, itootta (tonsillitis), koronaa/qufaa, fi dhibeewwan narvii jabeessuuf.",
+        haala: "Daakanii bishaanitti makuun funfaachuu ykn damma waliin makuun liqimsuu."
+    },
+    {
+        maqaa: "Dhadhaa Sa'aa (Cow Ghee)",
+        faayidaa: "Gogaa qaamaa laafisuu, madaa keessoo fayyisuu, fi humna sammuu fi lafee qaruuf.",
+        haala: "Nyaata ho'aa irratti makuun ykn qorichoota biraa waliin makuun soorachuu."
+    },
+    {
+        maqaa: "Aannan (Milk)",
+        faayidaa: "Lafee jabeessuuf, qaama nuffisiisu irraa bilisa gochuu, fi garaacha dhiphate jiisuuf.",
+        haala: "Ho'isanii damma itti naquun galgala galgala dhuguun baay'ee gorfama."
+    },
+    {
+        maqaa: "Qarfaatii (Cinnamon)",
+        faayidaa: "Garaacha gubaa dhowwuu, bullaa'insa nyaataa saffisiisuu, fi qufaa fi qorrii hir'isuuf.",
+        haala: "Shayiitti makuun ykn bishaanitti affeelanii bifa koflaatiin dhuguun gaariadha."
+    },
+    {
+        maqaa: "Kaarotii (Carrot)",
+        faayidaa: "Ija jabeessuuf, xurii dhiiga keessaa qulqulleessuuf, fi gogaa qaamaa miidhagsuuf.",
+        haala: "Kallaattiin nyaachuu ykn cuunfaa (juice) isaa damma waliin makuun dhuguu."
+    },
+    {
+        maqaa: "Wantoota Fayyaa Miidhan",
+        faayidaa: "Nyaata garmalee baay'isanii garaa guuttachuu, nyaata badaa, fi dhiphina dhabamsiisuu.",
+        haala: "Madaallii eeggatanii nyaachuu fi bishaan daddabalanii dhuguu."
+    },
+    {
+        maqaa: "Eegumsa fi Guddina Daa'immanii",
+        faayidaa: "Lafee isaanii jabeessuuf, dhukkubbii garaa ittisuuf, fi sammuu isaanii dammaqsuuf.",
+        haala: "Aannan haadhaa dabalatee, zayita habba-suudaa xiqqoo miila fi duuba isaanii dibuu."
+    },
+    {
+        maqaa: "Qoricha Fayyaa Dubartootaa",
+        faayidaa: "Dhukkubbii menses (laguu) hir'isuu, xannacha madaaluu, fi qaama keessoo qulqulleessuuf.",
+        haala: "Hulubataa fi qarafaa affeelanii bishaan isaa damma waliin dhuguun."
+    },
+    {
+        maqaa: "Eegumsa Fayyaa Dubartii Ulfaa",
+        faayidaa: "Ulfi akka jabaatu, dhiiga dabalataa kennuuf, fi miira koflaa/laafina hir'isuuf.",
+        haala: "Timira daddabalanii nyaachuu fi aannan loonii qulqulluu galgala dhuguu."
+    },
+    {
+        maqaa: "Qoricha Dubartii Deesseef",
+        faayidaa: "Aannan harmaa baay'isuuf, dhiiga xurii qaama keessaa baasuuf, fi humna deebisuuf.",
+        haala: "Hulubataa damma waliin affeelanii nyaachuu fi kofla timiraa soorachuu."
+    },
+    {
+        maqaa: "Eegumsa Fayyaa Dargaggootaaf",
+        faayidaa: "Humna isportii jabeessuuf, fuula qulqulleessuuf, fi dandeettii sammuu qaruuf.",
+        haala: "Habbat al-sawda fi jinjibila daakanii damma waliin liqimsuu fi bishaan baay'isuu."
+    },
+    {
+        maqaa: "Eegumsa Fayyaa Maanguddootaaf",
+        faayidaa: "Dhukkubbii jilbaa fi mudhii hir'isuu, madaallii onnee eeguu, fi lafee jabeessuuf.",
+        haala: "Dhadhaa loonii nyaata irratti fayyadamuu fi aannan ho'aa timira waliin soorachuu."
+    },
+    {
+        maqaa: "Ilaalcha Isportii fi Sochiilee Qaamaa",
+        faayidaa: "Dhiigni qaama keessa sirriitti akka naanna'u gochuuf, fi dadhabbi dhabamsiisuuf.",
+        haala: "Sochii qaamaa erga xumuranii booda bishaan zanjabiila qabu dhuguu."
+    },
+    {
+        maqaa: "Qajeelfama fi Fayyaa Uffataa",
+        faayidaa: "Qulqullina qaamaa eeguu, uffata dhiphaa irraa fagaachuu fi dhibee gogaa ittisuuf.",
+        haala: "Uffata qubbaayaa (cotton) uffachuu fi foolii gaarii (shitto) fayyadamuu."
+    },
+    {
+        maqaa: "Qajeelfama fi Fayyaa Dhugaatii",
+        faayidaa: "Kale qulqulleessuuf, garaacha qabbaneessuuf, fi summii baasuuf.",
+        haala: "Bishaan ta'anii (taphachaa) harka mirgaatiin bifa sadiin (3) hifachuun dhuguu."
+    },
+    {
+        maqaa: "Qajeelfama fi Fayyaa Hirribaa",
+        faayidaa: "Sammuu boqochiisuuf, humnasii haara'uuf, fi dhibee dhiphinaa (stress) ittisuuf.",
+        haala: "Galgala kofla subhii duranii gara mirgaatti garagalanii hirriiba garii rafuu."
+    },
+    {
+        maqaa: "Karaalee Irraanfannaa fi Yaadannoo",
+        faayidaa: "Sammuu dammaqsuu, irraanfannaa hir'isuu, fi yaadannoo jabeessuuf.",
+        haala: "Damma fi kofla firii habba-suudaa yeroo hunda ganama nyaachuu."
+    },
+    {
+        maqaa: "Wantoota Qalbii Qara Taasisan",
+        faayidaa: "Hubannoo garmalee dabaluu, tilmaama sirrii kennuuf, fi sammuu bal'isuuf.",
+        haala: "Miswaaka fayyadamuu, Quran dubbisuu, fi nyaata garmalee baay'isuu dhiisuu."
+    },
+    {
+        maqaa: "Maddaa fi Qoricha Doofummaa",
+        faayidaa: "Balghama sammuu keessatti hafe balleessuu fi dandeettii herregaa dammaqsuuf.",
+        haala: "Zanjabiila fi qustul-hindi damma waliin lallaaqanii yeroo hunda ganama soorachuu."
+    },
+    {
+        maqaa: "Qoricha Fedhii Nyaataa Dhabuu",
+        faayidaa: "Garaacha dadhabe kakaasuuf, fedhii soorataa banuu, fi miira nuffii balleessuuf.",
+        haala: "Dhangaggee (Vinegar) nyaata irratti makuu ykn safarjal (quince) nyaachuu."
     }
 ];
 
-function agarsiisiBiqiltoota(data) {
+function agarsiisiQorichoota(data) {
     const listContainer = document.getElementById('biqiltuuList');
-    listContainer.innerHTML = ''; 
+    if (!listContainer) return; 
+    
+    let htmlContent = ''; 
 
-    data.forEach(biqiltuu => {
-        const card = `
+    data.forEach(item => {
+        htmlContent += `
             <div class="card">
-                <h3>${biqiltuu.maqaa}</h3>
-                <p><strong>Maqaa Saayinsii:</strong> <i>${biqiltuu.saayinsii}</i></p>
-                <p><strong>Faayidaa:</strong> ${biqiltuu.faayidaa}</p>
-                <p><strong>Haala Ittifayyadamaa:</strong> ${biqiltuu.qophii}</p>
+                <h3>${item.maqaa}</h3>
+                <p><strong>Faayidaa:</strong> ${item.faayidaa}</p>
+                <p><strong>Haala Ittifayyadamaa:</strong> ${item.haala}</p>
             </div>
         `;
-        listContainer.innerHTML += card;
     });
+    
+    listContainer.innerHTML = htmlContent; 
 }
 
 // Hojii Barbaachaa (Search)
 function barbaadiBiqiltuu() {
     const query = document.getElementById('searchInput').value.toLowerCase();
-    const filtered = biqiltoota.filter(b => 
+    const filtered = xibbNabawiiData.filter(b => 
         b.maqaa.toLowerCase().includes(query) || 
         b.faayidaa.toLowerCase().includes(query)
     );
-    agarsiisiBiqiltoota(filtered);
+    agarsiisiQorichoota(filtered);
 }
 
-// Yeroo Appiin banamu jalqaba hunda agarsiisi
-window.onload = () => agarsiisiBiqiltoota(biqiltoota);
+// Yeroo Appiin guutummaatti banamu jalqaba hunda agarsiisi
+document.addEventListener('DOMContentLoaded', () => {
+    agarsiisiQorichoota(xibbNabawiiData);
+});
