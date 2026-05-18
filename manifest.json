@@ -2,15 +2,17 @@
   "name": "Qoricha Aadaa App",
   "short_name": "QorichaAadaa",
   "description": "Kuusaa-deetaa dijitaalaa qoricha aadaa Oromoo",
-  "start_url": "./index.html",
+  "start_url": "index.html",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#2e7d32",
+  "orientation": "portrait",
   "icons": [
     {
-      "src": "icon-512.png",
+      "src": "icon.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ]
 }
