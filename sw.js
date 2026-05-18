@@ -3,7 +3,7 @@ const assets = [
   './',
   './index.html',
   './manifest.json',
-  './icon-512.png'
+  './icon.png' // Bakka kanatti 'icon-512.png' mofaa sana gara 'icon.png' tti jijjiirreera
 ];
 
 // 1. Install - Fayiilota kuusaa (cache) keessa kaa'uuf
@@ -11,7 +11,7 @@ self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(CACHE_NAME).then(cache => {
       console.log('Fayiilonni cache keessa galaniiru');
-      return cache.addAll(assets);
+      return cache.addAll(assets).catch(err => console.log("Cache addAll error: ", err));
     })
   );
 });
