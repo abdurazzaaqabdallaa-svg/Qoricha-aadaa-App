@@ -12,6 +12,59 @@
             --secondary-color: #f1f8e9;
             --text-color: #333;
             --accent-color: #d84315;
+            /* Miidhagina Mallattoo Sarara Sadii */
+.menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+    z-index: 1001;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.menu-toggle span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: white; /* Sararri sun bifa adiin akka mul'atu */
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+/* Miidhagina Liinkii Menuu (Moobaayilaaf) */
+.nav-menu {
+    display: none; /* Jalqaba irratti dhokataa dha */
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #2e7d32; /* Bifa magariisa kooftoo keetii */
+    border: 1px solid #ffffff33;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-bottom: 1px solid #ffffff1a;
+}
+
+.nav-menu a:last-child {
+    border-bottom: none;
+}
+
+/* Yeroo menu'n saaqamu akka mul'atu gochuuf */
+.nav-menu.active {
+    display: flex;
+}
         }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -543,6 +596,12 @@ document.addEventListener('DOMContentLoaded', () => {
         </ul>
     
     <blockquote>حمية الجسم عن الفضولات، وحمية الروح عن الآفات، هما جماع الصحة.<br><strong>[Afaan Oromoo]:</strong> Qaama xurii irraa eeguu fi hafuura (soul) dhibee irraa 
+        <script>
+function toggleMenu() {
+    var menu = document.getElementById("navMenu");
+    menu.classList.toggle("active");
+}
+        </script>
         
 </script>
 
