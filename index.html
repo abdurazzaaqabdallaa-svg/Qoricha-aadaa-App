@@ -1,71 +1,19 @@
-
 <!DOCTYPE html>
 <html lang="om">
 <head>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2172834430426530" crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2172834430426530" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Qoricha-aadaa-App (Xibb-un-Nabawi)</title>
+    
     <style>
         :root {
             --primary-color: #2e7d32;
             --secondary-color: #f1f8e9;
             --text-color: #333;
             --accent-color: #d84315;
-            /* Miidhagina Mallattoo Sarara Sadii */
-.menu-toggle {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 21px;
-    cursor: pointer;
-    z-index: 1001;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-}
-
-.menu-toggle span {
-    display: block;
-    height: 3px;
-    width: 100%;
-    background-color: white; /* Sararri sun bifa adiin akka mul'atu */
-    border-radius: 3px;
-    transition: 0.3s;
-}
-
-/* Miidhagina Liinkii Menuu (Moobaayilaaf) */
-.nav-menu {
-    display: none; /* Jalqaba irratti dhokataa dha */
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    background-color: #2e7d32; /* Bifa magariisa kooftoo keetii */
-    border: 1px solid #ffffff33;
-    border-radius: 8px;
-    padding: 10px;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
-}
-
-.nav-menu a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 15px;
-    font-size: 16px;
-    border-bottom: 1px solid #ffffff1a;
-}
-
-.nav-menu a:last-child {
-    border-bottom: none;
-}
-
-/* Yeroo menu'n saaqamu akka mul'atu gochuuf */
-.nav-menu.active {
-    display: flex;
-}
         }
+        
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
@@ -73,7 +21,198 @@
             padding: 0;
             background-color: #f9f9f9;
             color: var(--text-color);
-            </style>
+        }
+
+        /* 🎨 CSS Hamburger Menu */
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        header p {
+            margin: 5px 0 0 0;
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .menu-toggle {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 25px;
+            height: 18px;
+            cursor: pointer;
+            z-index: 1002;
+            position: absolute;
+            top: 25px;
+            right: 20px;
+        }
+
+        .menu-toggle span {
+            display: block;
+            height: 3px;
+            width: 100%;
+            background-color: white;
+            border-radius: 3px;
+            transition: 0.3s;
+        }
+
+        .nav-menu {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 65px;
+            right: 20px;
+            background-color: #1b5e20;
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 8px;
+            padding: 5px 0;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+            z-index: 1001;
+            width: 220px;
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            padding: 12px 15px;
+            font-size: 15px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .nav-menu a:last-child {
+            border-bottom: none;
+        }
+
+        .nav-menu.active {
+            display: flex;
+        }
+
+        /* 🎨 CSS Kutaalee Biroo */
+        .search-container {
+            padding: 15px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        #searchInput {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid var(--primary-color);
+            border-radius: 25px;
+            font-size: 16px;
+            outline: none;
+            box-sizing: border-box;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+
+        .index-list {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+
+        .index-list h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 10px;
+        }
+
+        .index-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+            list-style: none;
+            padding: 0;
+        }
+
+        .index-grid li a {
+            color: var(--text-color);
+            text-decoration: none;
+            display: block;
+            padding: 8px 12px;
+            background: var(--secondary-color);
+            border-radius: 4px;
+            transition: 0.3s;
+        }
+
+        .index-grid li a:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .content-section {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            margin-bottom: 25px;
+            border-left: 5px solid var(--primary-color);
+        }
+
+        .content-section h2 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+
+        .content-section h3 {
+            color: var(--accent-color);
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+
+        .sub-section {
+            margin-bottom: 15px;
+        }
+
+        .sub-section strong {
+            color: #1b5e20;
+        }
+
+        blockquote {
+            background: #fff8e1;
+            border-left: 5px solid #ffb300;
+            margin: 1.5em 10px;
+            padding: 10px 20px;
+            font-style: italic;
+        }
+
+        .note {
+            background: #ffe0b2;
+            padding: 10px 15px;
+            border-radius: 4px;
+            font-size: 14px;
+            border-left: 4px solid #f57c00;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
 
@@ -85,525 +224,265 @@
         </div>
 
         <nav class="nav-menu" id="navMenu">
-            <a href="#tamiirul-hindii">Kutaa 10: Tamiirul Hindii</a>
-            <a href="#jinjiibilaa">Kutaa 11: Jinjiibilaa</a>
-            <a href="#wantoota-miidhan">Kutaa 18: Wantoota Miidhan</a>
+            <a href="#haba-suudaa" onclick="toggleMenu()">Kutaa 01: Haba-suudaa</a>
+            <a href="#qullubbii-adii" onclick="toggleMenu()">Kutaa 04: Qullubbii Adii</a>
+            <a href="#hulubataa" onclick="toggleMenu()">Kutaa 05: Hulubataa</a>
+            <a href="#talbaa" onclick="toggleMenu()">Kutaa 06: Talbaa</a>
+            <a href="#shunkurtaa-diimaa" onclick="toggleMenu()">Kutaa 07: Shunkurtaa Diimaa</a>
+            <a href="#rummaanaa" onclick="toggleMenu()">Kutaa 08: Rummaanaa</a>
+            <a href="#timiraa" onclick="toggleMenu()">Kutaa 09: Timiraa</a>
+            <a href="#tamiirul-hindii" onclick="toggleMenu()">Kutaa 10: Tamiirul Hindii</a>
+            <a href="#jinjiibilaa" onclick="toggleMenu()">Kutaa 11: Jinjiibilaa</a>
+            <a href="#wantoota-miidhan" onclick="toggleMenu()">Kutaa 18: Wantoota Miidhan</a>
         </nav>
 
-        <h1>Qoricha Aadaa App</h1>
+        <h1>Xibb-un-Nabawi</h1>
+        <p>Appi Fayyaa fi Qoricha Uumamaa</p>
     </header>
-        }
-        header {
-            background-color: var(--primary-color);
-            color: white;
-            text-align: center;
-            padding: 20px;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        header h1 {
-            margin: 0;
-            font-size: 24px;
-        }
-        header p {
-            margin: 5px 0 0 0;
-            font-size: 14px;
-            opacity: 0.9;
-        }
-        .search-container {
-            padding: 15px;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        #searchInput {
-            width: 100%;
-            padding: 12px;
-            border: 2px solid var(--primary-color);
-            border-radius: 25px;
-            font-size: 16px;
-            outline: none;
-            box-sizing: border-box;
-        }
-        main {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 0 15px;
-        }
-        .index-list {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-            margin-bottom: 30px;
-        }
-        .index-list h2 {
-            color: var(--primary-color);
-            border-bottom: 2px solid var(--secondary-color);
-            padding-bottom: 10px;
-        }
-        .index-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 10px;
-            list-style: none;
-            padding: 0;
-        }
-        .index-grid li a {
-            color: var(--text-color);
-            text-decoration: none;
-            display: block;
-            padding: 8px 12px;
-            background: var(--secondary-color);
-            border-radius: 4px;
-            transition: 0.3s;
-        }
-        .index-grid li a:hover {
-            background: var(--primary-color);
-            color: white;
-        }
-        .content-section {
-            background: white;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-            margin-bottom: 25px;
-            border-left: 5px solid var(--primary-color);
-        }
-        .content-section h2 {
-            color: var(--primary-color);
-            margin-top: 0;
-        }
-        .content-section h3 {
-            color: var(--accent-color);
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 5px;
-        }
-        .sub-section {
-            margin-bottom: 15px;
-        }
-        .sub-section strong {
-            color: #1b5e20;
-        }
-        blockquote {
-            background: #fff8e1;
-            border-left: 5px solid #ffb300;
-            margin: 1.5em 10px;
-            padding: 10px 20px;
-            font-style: italic;
-        }
-        .note {
-            background: #ffe0b2;
-            padding: 10px 15px;
-            border-radius: 4px;
-            font-size: 14px;
-            border-left: 4px solid #f57c00;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #333;
-            color: white;
-            margin-top: 5px;
-        }
-    </style>
-</head>
-<body>
 
-<header>
-    <h1>Xibb-un-Nabawi</h1>
-    <p>Appi Fayyaa fi Qoricha Uumamaa</p>
-</header>
+    <div class="search-container">
+        <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="Barbaadi (Fkn: Haba-suudaa, Qullubbii)...">
+    </div>
 
-<div class="search-container">
-    <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="Barbaadi (Fkn: Haba-suudaa, Qullubbii)...">
-</div>
+    <main>
+        <section class="index-list">
+            <h2>Baafata Qabiyyees</h2>
+            <ul class="index-grid">
+                <li><a href="#haba-suudaa">1. Faayidaalee Haba-suudaa</a></li>
+                <li><a href="#qullubbii-adii">2. Faayidaa Qullubbii Adii</a></li>
+                <li><a href="#hulubataa">3. Faayidaalee Hulubataa</a></li>
+                <li><a href="#talbaa">4. Faayidaa Qoonxar/Talbaa</a></li>
+                <li><a href="#shunkurtaa-diimaa">5. Faayidaa Shunkurtaa Diimaa</a></li>
+                <li><a href="#rummaanaa">6. Faayidaalee Rummaanaa</a></li>
+                <li><a href="#timiraa">7. Faayidaalee Timiraa</a></li>
+                <li><a href="#tamiirul-hindii">8. Faayidaalee Tamiirul Hindii</a></li>
+                <li><a href="#jinjiibilaa">9. Faayidaalee Jinjiibilaa</a></li>
+                <li><a href="#wantoota-miidhan">10. Wantoota Fayyaa Miidhan</a></li>
+            </ul>
+        </section>
 
-<main>
-    <section class="index-list">
-        <h2>Baafata Qabiyyees</h2>
-        <ul class="index-grid">
-            <li><a href="#haba-suudaa">1. Faayidaalee Haba-suudaa</a></li>
-            <li><a href="#qullubbii-adii">2. Faayidaa Qullubbii Adii</a></li>
-            <li><a href="#hulubataa">3. Faayidaalee Hulubataa</a></li>
-            <li><a href="#talbaa">4. Faayidaa Qoonxar/Talbaa</a></li>
-            <li><a href="#shunkurtaa-diimaa">5. Faayidaa Shunkurtaa Diimaa</a></li>
-            <li><a href="#rummaanaa">6. Faayidaalee Rummaanaa</a></li>
-            <li><a href="#timiraa">7. Faayidaalee Timiraa</a></li>
-            <li><a href="#tamiirul-hindii">8. Faayidaalee Tamiirul Hindii</a></li>
-            <li><a href="#jinjiibilaa">9. Faayidaalee Jinjiibilaa</a></li>
-            <li><a href="#wantoota-miidhan">10. Wantoota Fayyaa Miidhan</a></li>
-        </ul>
-    </section>
-    
+        <div id="biqiltuuList"></div>
 
-    <section id="haba-suudaa" class="content-section">
-        <h2>Kutaa 01 / Qoricha Uumamaa: Haba-suudaa</h2>
-        
-        <div class="sub-section">
-            <h3>1. Sirna Hargansaa fi Utallaa</h3>
-            <p><strong>Utallaa:</strong> Yoo Haba-suudaan waxalamtee (fried), uffata killaasii keessatti hidhamtee funyaaniin urguffatan (inhale), utallaa gogaa fi qorra irraa dhufuuf furmaata dha.</p>
-            <p><strong>Asmii fi Hargansaa:</strong> Qoonqoo fi qoma keessaa dhibee itti citu (mucus) qulqulleessuun hargansaa ni salphisti.</p>
-        </div>
-
-        <div class="sub-section">
-            <h3>2. Sirna Nyaataa fi Summii</h3>
-            <p><strong>Garaa Kaasaa fi Garaa Gubaa:</strong> Garaa keessaa dhuufa ykn dhuunfuu (gas) ni balleessiti.</p>
-            <p><strong>Rirma Garaa:</strong> Yoo dammaa fi bishaan ho'aan dhugame, rirma garaa (worms) ni ajjeesti.</p>
-            <p><strong>Dhagaa Kalee:</strong> Yoo dammaa fi bishaan ho'aa waliin dhugame, dhagaa kalee fi afuuffee keessatti uumamu ni bulbullee baasti.</p>
-        </div>
-
-        <div class="sub-section">
-            <h3>3. Dhukkubbii Qaama Alaa</h3>
-            <p><strong>Mataa Bowwuu:</strong> Yoo bifa dibataatiin ykn vaayinaagira (vinegar) waliin adda irratti dibatan, mataa bowwuu qorra irraa dhufuuf qoricha.</p>
-            <p><strong>Ilkaan:</strong> Yoo bishaan vaayinaagiraa keessatti affeelamee ittiin kofalani (rinse), dhukkubbii ilkaanii ni hir'isti.</p>
-            <p><strong>Barasii fi Dhukkuba Gogaa:</strong> Yoo ashaaraa (vinegar) waliin walitti makuun gogaa irratti dibatan, barasii fi shiftoo gogaa tokko tokkoof ni gargaarti.</p>
-        </div>
-
-        <div class="sub-section">
-            <h3>4. Faayidaalee Biroo</h3>
-            <p><strong>Garaacha:</strong> Nyaata bullaa'uu didu bulleessuuf ni gargaarti.</p>
-            <p><strong>Dhibee Dubartootaa:</strong> Marsaa xurii (menstruation) sirreessuu fi aannan harmaa dubartootaaf dabaluu irratti shoora ni qabdi.</p>
-        </div>
-
-        <h3>Qajeelfama Ibnul Qayyim Dabarse</h3>
-        <blockquote>Haba-suudaan miira "Ho'aa fi Gogaa" waan qabduuf, dhibeewwan jiidha (moisture) fi qorra irraa dhufan qolachuuf baay'ee gaariidha.</blockquote>
-
-        <div class="note">
-            <strong>Yaadachiisa:</strong> Akka ammayyaatti, Haba-suudaa fayyadamuu yoo barbaadde, mudaa (dosage) ishee gahaa ta'e qofa fayyadami. Yoo dhibee biroo qabaatte ogeessa gorsa gaafachuun gaariidha.
-        </div>
-    </section>
-
-    <section id="qullubbii-adii" class="content-section">
-        <h2>Kutaa 04 / Qoricha Uumamaa: Qullubbii Adii</h2>
-        <p>Ibnul Qayyim akka jedhutti, Qullubbii Adiin qoricha baay'ee jabaa ho'aa fi gogaa ta'e dha. Faayidaalee isaa keessaa:</p>
-        
-        <ul>
-            <li><strong>Summii Ittisuu:</strong> Nama summiin qabameef, akkasumas nama humni bofaa ykn aqraabaa waraaneef dhibee ni qolata; bifa dibataatiinis ni ta'a.</li>
-            <li><strong>Dhuunfuu fi Koflaa:</strong> Dhuunfuu (gas) garaa keessaa ni balleessa, koflaa (phlegm) ni kutata, garaacha keessaa jiidha badala ta'e ni qulqulleessa.</li>
-            <li><strong>Fincaan fi Marsaa Xurii:</strong> Fincaan dhangalaasuu irratti humna guddaa qaba; dubartoota xuriin dhiigaa jalaa citeefis ni gargaara.</li>
-            <li><strong>Qomaa fi Quufaa:</strong> Yoo affeelamee bishaan isaa dhugame, quufaa (cough) yeroo dheeraa fi dhukkubbii qomaa qorra irraa dhufuuf furmaata.</li>
-            <li><strong>Madaa fi Gogaa:</strong> Yoo damma waliin makuun barasii (vitiligo) irratti dibatan ni fayyada; dhiitama qaamaa ni bulbullee baasa.</li>
-            <li><strong>Ilkaan:</strong> Yoo ashaaraa (vinegar) waliin affeelamee ittiin kofalani, dhukkubbii ilkaanii ni hir'isa.</li>
-        </ul>
-
-        <div class="note">
-            <strong>تنبيه ابن القيم (Yaadachiisa):</strong> Yoo baay'inaan nyaatame mata-bowwuu fiduu fi ija miidhuu danda'a. Foolii isaa balleessuuf garuu affeelanii (cooked) nyaachuun gaariidha.
-        </div>
-    </section>
-
-    <section id="hulubataa" class="content-section">
-        <h2>Kutaa 05 / Qoricha Uumamaa: Hulubataa</h2>
-        
-        <h3>1. Sirna Hargansaa fi Qomaa</h3>
-        <p>Hulubanni bishaan keessatti affeelamee yoo dhugame, Quufaa (cough) fi Asmii ni salphisti. Qomaa fi dhuunshoo (lungs) keessaa dhibee furriifi koflaa (phlegm) furmisiisanii baasuuf baay'ee gargaarti.</p>
-
-        <h3>2. Sirna Nyaataa fi Garaa</h3>
-        <p>Dhukkubbii garaa fi mar'ummaanii ni qabbaneessiti. Garaa gogaa ni laaffisti (Laxative), dhuunfuu fi gubaa garaa keessaa ni balleessiti.</p>
-
-        <h3>3. Faayidaa Dubartootaaf</h3>
-        <p>Dubartoota hoosisaniif aannan harmaa akka baay'atu gochuu irratti humna guddaa qabdi. Marsaa xurii (menstruation) dubartootaa ni sirreessiti.</p>
-
-        <h3>4. Dhukkubbii Alaa fi Gogaa</h3>
-        <p>Mata-biraa ykn dhiitama qaama alaa irratti yoo dibatan (Lidhuu/Poultice), dhiitama ni bulbullee baasti. Rifeensaaf yoo bishaan isheetiin mataa dhiqatan, rifeensa ni jabeessiti, qola mataa (dandruff) ni balleessiti.</p>
-
-        <h3>5. Dhukkuboota Biroo</h3>
-        <p>Dhukkubii Bawaasiraa (Hemorrhoids) qabaniif, bishaan ishee keessa taa'uun (sitting bath) dhukkubbii ni hir'isa. Madaa fi dhiitama kalee fi madiitti uumamuuf qoricha gaariidha.</p>
-
-        <h3>Akkaataa Itti Fayyadamaa (Akka Heddii Nabiyyiitti)</h3>
-        <ul>
-            <li><strong>Dhuguuf:</strong> Bulee ishee bishaan keessatti affeelanii bishaanicha dammaan makuun dhuguu.</li>
-            <li><strong>Dibachuuf:</strong> Hulubaa daakamte damma ykn ashaaraa (vinegar) waliin makuun bakka dhiitamaa ykn madaa irratti dibachuu.</li>
-            <li><strong>Nyaataaf:</strong> Akkuma jirtutti nyaata waliin makuu.</li>
-        </ul>
-
-        <blockquote>"Namoonni otoo faayidaa Hulubata keessa jiru beekanii, otoo gatii warqeetiin bitamteellee ni bitatu turan." - Mammaaksa Ogeeyyii Durii</blockquote>
-    </section>
-
-    <section id="talbaa" class="content-section">
-        <h2>Kutaa 06 / Qoricha Uumamaa: Qoonxar / Talbaa</h2>
-        <p>Ibnul Qayyim kitaaba isaa "Xibb-un-Nabawii" keessatti sanyiin Qoonxar/Talbaa: ho'aa fi jiidhaa akka ta'ee fi faayidaa guddaa akka qabu ibseera.</p>
-        <ul>
-            <li><strong>Quufaa fi Qoma:</strong> Quufaa yeroo dheeraa ni qabbaneessa; dhukkubbii qomaa fi sombaaf ni gargaara.</li>
-            <li><strong>Kalee fi Fincaan:</strong> Fincaan ni dhangalaasa; yoo dammaan makamee dhugame dhagaa kalee fi afuuffee fincaanii keessatti uumamu bulbullee baasuuf gargaara.</li>
-            <li><strong>Dhiitama fi Gogaa:</strong> Yoo ashaaraa (vinegar) waliin makuun bakka dhiitamaa irratti dibatan, dhiitama ni bulbullee baasa; gogaa ni qulqulleessa, rifeensa ni fooyyessa, qola mataas (dandruff) ni balleessa.</li>
-        </ul>
-        <p><strong>Akkaataa Itti Fayyadamaa:</strong> Sanyiin killaasii yoo waxalame (roasted) garaa hidha (constipation), yoo akkuma jirutti (dhuunshaan) fayyadaman immoo garaa laaffisaa fi xurii garaa keessaa baasuuf gargaara.</p>
-    </section>
-
-    <section id="shunkurtaa-diimaa" class="content-section">
-        <h2>Kutaa 07 / Qoricha Uumamaa: Shunkurtaa Diimaa</h2>
-        <ul>
-            <li><strong>Summii Ittisuu:</strong> Bishaan bakkaa bakkatti jijjiiramuun dhufe ykn qilleensa summaa'aa irraa dhukkuba dhufu ni ittisa.</li>
-            <li><strong>Sirna Nyaataa:</strong> Fedhii nyaataa ni dabala, garaacha ni jabeessa, koflaa (phlegm) ni kutata, akkasumas jiidha garaacha keessa jiru ni qulqulleessa.</li>
-            <li><strong>Midihaa fi Ijaa:</strong> Yoo damma waliin makuun akka kuulaatti ija dibatan, bishaan ija keessa jiruuf gaariidha. Yoo barasii (vitiligo) irratti dibatan ni fayyada.</li>
-            <li><strong>Fincaan fi Humna Qaamaa:</strong> Fincaan ni dhangalaasa, humna saal-quunnamtii ni dabala, marsaa xurii dubartootaas ni sirreessa.</li>
-            <li><strong>Madaa fi Shiftoo:</strong> Yoo soogidda waliin makuun godaannisa ykn kormatti (warts) irratti dibatan, buqqisee baasa.</li>
-        </ul>
-        <p><strong>Gorsa Nama Karaa Deemuuf:</strong> Namni gara biyya biraa deemu tokko, dhibee naannoo sanaa fi bishaan jijjiirame irraa of eeguuf shunkurtaa diimaa nyaachuu qaba jedha.</p>
-        <div class="note">
-            <strong>Yaadachiisa Ibnul Qayyim:</strong> Namni shunkurtaa nyaate yoo gara masjiidaa deemu foolii ishee balleessuuf baala Sududaa (Rue) nyaachuu ykn shunkurtaacha affeelanii (cooked) nyaachuun foolii ishee akka hir'isu ibseera.
-        </div>
-    </section>
-
-    <section id="rummaanaa" class="content-section">
-        <h2>Kutaa 08 / Qoricha Uumamaa: Rummaanaa</h2>
-        <p>Ibnul Qayyim akka jedhutti, Rummaanichi akaakuu lama qaba:</p>
-        <ul>
-            <li><strong>Rummaana Mi'aawaa:</strong> Ho'aa fi jiidhaa dha; garaachaaf baay'ee gaariidha, ni jabeessa. Qoonqoo, qomaa fi sombaaf ni fayyada, quufaas ni qabbaneessa.</li>
-            <li><strong>Rummaana Dhangaggaa'aa:</strong> Qorraa fi gogaadha; garaacha jabeessuu irratti humna guddaa qaba. Fincaan ni dhangalaasa, finniisa (bile) ni qabbaneessa, garaa kaasaa ni dhaaba, akkasumas haqqee ni ittisa.</li>
-            <li><strong>Irgii fi Afaan:</strong> Yoo bishaan qola isaa affeelamee ittiin kofalani (rinse), irgii dhiigu ni jabeessa.</li>
-            <li><strong>Madaa:</strong> Qolli rummaanaa yoo akka dibataatti fayyadaman, madaa hamaa ta'e fayyisuuf gargaara.</li>
-        </ul>
-        <blockquote>الرمان الحلو يوافق الصدر، والحامض يوافق المعدة الملتهبة.<br><strong>[Afaan Oromoo]:</strong> Rummaanni mi'aawaan qomaaf deeggarsa kenna, inni dhangaggaa'aan immoo garaacha gubatuuf (inflammation) furmaata.</blockquote>
-    </section>
-<footer>
-    <p>&copy; 2026 Qoricha-aadaa-App. All rights reserved.</p>
-</footer>
-
-<script>
-// 1. Deetaan Qorichoota 30n Guutuu As Keessa Gala
-const xibbNabawiiData = [
-    {
-        maqaa: "Haba-suudaa (Habbat al-Sawda)",
-        faayidaa: "Dhibee du'a malee jiru hundumaaf qoricha madaalawaadha. Dandeettii ittisa qaamaa (Immunity) garmalee jabeessa.",
-        haala: "Zayita isaa qussanii ykn firii isaa dhaananii damma waliin makuun ganama suumii soorachuu."
-    },
-    {
-        maqaa: "Qullubbii Adii (Garlic)",
-        faayidaa: "Dhibee qofaa cimaa, infekshinii, roraa qaamaa, fi dhibeewwan raammoo garaa dhabamsiisuuf.",
-        haala: "Kallaattiin bulchesanii damma waliin nyaachuu ykn dafanii nyaatatti makuun soorachuu."
-    },
-    {
-        maqaa: "Hulubataa (Fenugreek / Hulba)",
-        faayidaa: "Suga dhiigaa madaaluuf, roraa garaa ballessuuf, fi dubartoota akasumas garaacha ho'isuuf gargaara.",
-        haala: "Firii isaa bishaanitti affeelanii bishaan isaa dhuguu ykn daakuu isaa fayyadamuu."
-    },
-    {
-        maqaa: "Qoonxar / Talbaa (Flaxseed)",
-        faayidaa: "Qufaa cimaa gogsaa ta'e, dhibee handaraafi, fi mar'imaan dhiphachuu irraa ittisa.",
-        haala: "Gogsanii erga daakamee booda bishaan ho'aan makuun ykn affeelanii firii isaa dhuguu."
-    },
-    {
-        maqaa: "Shunkurtaa Diimaa (Onion)",
-        faayidaa: "Summii bishaanii fi qilleensaa ittisuu, garaacha xurii irraa qulqulleessuu fi baakteriyaa ajjeesuuf.",
-        haala: "Daddabalanii nyaata keessatti affeelanii soorachuun ykn cuunfaa isaa zayitaan makuu."
-    },
-    {
-        maqaa: "Rummaana (Pomegranate)",
-        faayidaa: "Garaacha qulqulleessuuf, keessoo garaa gubaa dhowwuu, fi onnee dadhabe jabeessuuf.",
-        haala: "Fuduraa kana kallaattiin firiishee nyaachuu ykn cuunfaa isaa qulqulluu dhuguun."
-    },
-    {
-        maqaa: "Timira (Dates)",
-        faayidaa: "Humna fi kalsiyum qaamaa kennuuf, garaacha jabeessuu, fi summii garmalee qaama keessaa baasuuf.",
-        haala: "Ganama suumii (empty stomach) lakkoofsa fatihiin (7) nyaachuun akkaan gorfama."
-    },
-    {
-        maqaa: "Tamiirul Hindii (Tamarind)",
-        faayidaa: "Garaacha jiisuu, dheebuu dhowwuu, fi dhibee dhiita'insa qaamaa (inflammation) hir'isuuf.",
-        haala: "Bishaan qorran keessa bulchanii cuunfaa isaa qullaa ykn soogidda xiqqoon dhuguu."
-    },
-    {
-        maqaa: "Jinjiibila (Ginger)",
-        faayidaa: "Garaacha ho'isuuf, qilleensa (gas) garaa baasuuf, fi balghama sammuu ulfaatessu sassaabuuf.",
-        haala: "Nyaata keessatti makuun ykn affeelanii bishaan isaa bifa shayiitiin dhuguun."
-    },
-    {
-        maqaa: "Qaranfulii (Cloves)",
-        faayidaa: "Dhukkubbii ilkaanii hir'isuu, mudhii fi jilba jabeessu, fi foolii afanii miidhagsuuf.",
-        haala: "Ilkaan jidduu qabuun ykn affeelanii bishaan isaatiin afaan lallaaqachuun."
-    },
-    {
-        maqaa: "Quusxiul Hindii (Indian Costus)",
-        faayidaa: "Dhukkubbii qoonqoo, itootta (tonsillitis), koronaa/qufaa, fi dhibeewwan narvii jabeessuuf.",
-        haala: "Daakanii bishaanitti makuun funfaachuu ykn damma waliin makuun liqimsuu."
-    },
-    {
-        maqaa: "Dhadhaa Sa'aa (Cow Ghee)",
-        faayidaa: "Gogaa qaamaa laafisuu, madaa keessoo fayyisuu, fi humna sammuu fi lafee qaruuf.",
-        haala: "Nyaata ho'aa irratti makuun ykn qorichoota biraa waliin makuun soorachuu."
-    },
-    {
-        maqaa: "Aannan (Milk)",
-        faayidaa: "Lafee jabeessuuf, qaama nuffisiisu irraa bilisa gochuu, fi garaacha dhiphate jiisuuf.",
-        haala: "Ho'isanii damma itti naquun galgala galgala dhuguun baay'ee gorfama."
-    },
-    {
-        maqaa: "Qarfaatii (Cinnamon)",
-        faayidaa: "Garaacha gubaa dhowwuu, bullaa'insa nyaataa saffisiisuu, fi qufaa fi qorrii hir'isuuf.",
-        haala: "Shayiitti makuun ykn bishaanitti affeelanii bifa koflaatiin dhuguun gaariadha."
-    },
-    {
-        maqaa: "Kaarotii (Carrot)",
-        faayidaa: "Ija jabeessuuf, xurii dhiiga keessaa qulqulleessuuf, fi gogaa qaamaa miidhagsuuf.",
-        haala: "Kallaattiin nyaachuu ykn cuunfaa (juice) isaa damma waliin makuun dhuguu."
-    },
-    {
-        maqaa: "Wantoota Fayyaa Miidhan",
-        faayidaa: "Nyaata garmalee baay'isanii garaa guuttachuu, nyaata badaa, fi dhiphina dhabamsiisuu.",
-        haala: "Madaallii eeggatanii nyaachuu fi bishaan daddabalanii dhuguu."
-    },
-    {
-        maqaa: "Eegumsa fi Guddina Daa'immanii",
-        faayidaa: "Lafee isaanii jabeessuuf, dhukkubbii garaa ittisuuf, fi sammuu isaanii dammaqsuuf.",
-        haala: "Aannan haadhaa dabalatee, zayita habba-suudaa xiqqoo miila fi duuba isaanii dibuu."
-    },
-    {
-        maqaa: "Qoricha Fayyaa Dubartootaa",
-        faayidaa: "Dhukkubbii menses (laguu) hir'isuu, xannacha madaaluu, fi qaama keessoo qulqulleessuuf.",
-        haala: "Hulubataa fi qarafaa affeelanii bishaan isaa damma waliin dhuguun."
-    },
-    {
-        maqaa: "Eegumsa Fayyaa Dubartii Ulfaa",
-        faayidaa: "Ulfi akka jabaatu, dhiiga dabalataa kennuuf, fi miira koflaa/laafina hir'isuuf.",
-        haala: "Timira daddabalanii nyaachuu fi aannan loonii qulqulluu galgala dhuguu."
-    },
-    {
-        maqaa: "Qoricha Dubartii Deesseef",
-        faayidaa: "Aannan harmaa baay'isuuf, dhiiga xurii qaama keessaa baasuuf, fi humna deebisuuf.",
-        haala: "Hulubataa damma waliin affeelanii nyaachuu fi kofla timiraa soorachuu."
-    },
-    {
-        maqaa: "Eegumsa Fayyaa Dargaggootaaf",
-        faayidaa: "Humna isportii jabeessuuf, fuula qulqulleessuuf, fi dandeettii sammuu qaruuf.",
-        haala: "Habbat al-sawda fi jinjibila daakanii damma waliin liqimsuu fi bishaan baay'isuu."
-    },
-    {
-        maqaa: "Eegumsa Fayyaa Maanguddootaaf",
-        faayidaa: "Dhukkubbii jilbaa fi mudhii hir'isuu, madaallii onnee eeguu, fi lafee jabeessuuf.",
-        haala: "Dhadhaa loonii nyaata irratti fayyadamuu fi aannan ho'aa timira waliin soorachuu."
-    },
-    {
-        maqaa: "Ilaalcha Isportii fi Sochiilee Qaamaa",
-        faayidaa: "Dhiigni qaama keessa sirriitti akka naanna'u gochuuf, fi dadhabbi dhabamsiisuuf.",
-        haala: "Sochii qaamaa erga xumuranii booda bishaan zanjabiila qabu dhuguu."
-    },
-    {
-        maqaa: "Qajeelfama fi Fayyaa Uffataa",
-        faayidaa: "Qulqullina qaamaa eeguu, uffata dhiphaa irraa fagaachuu fi dhibee gogaa ittisuuf.",
-        haala: "Uffata qubbaayaa (cotton) uffachuu fi foolii gaarii (shitto) fayyadamuu."
-    },
-    {
-        maqaa: "Qajeelfama fi Fayyaa Dhugaatii",
-        faayidaa: "Kale qulqulleessuuf, garaacha qabbaneessuuf, fi summii baasuuf.",
-        haala: "Bishaan ta'anii (taphachaa) harka mirgaatiin bifa sadiin (3) hifachuun dhuguu."
-    },
-    {
-        maqaa: "Qajeelfama fi Fayyaa Hirribaa",
-        faayidaa: "Sammuu boqochiisuuf, humnasii haara'uuf, fi dhibee dhiphinaa (stress) ittisuuf.",
-        haala: "Galgala kofla subhii duranii gara mirgaatti garagalanii hirriiba garii rafuu."
-    },
-    {
-        maqaa: "Karaalee Irraanfannaa fi Yaadannoo",
-        faayidaa: "Sammuu dammaqsuu, irraanfannaa hir'isuu, fi yaadannoo jabeessuuf.",
-        haala: "Damma fi kofla firii habba-suudaa yeroo hunda ganama nyaachuu."
-    },
-    {
-        maqaa: "Wantoota Qalbii Qara Taasisan",
-        faayidaa: "Hubannoo garmalee dabaluu, tilmaama sirrii kennuuf, fi sammuu bal'isuuf.",
-        haala: "Miswaaka fayyadamuu, Quran dubbisuu, fi nyaata garmalee baay'isuu dhiisuu."
-    },
-    {
-        maqaa: "Maddaa fi Qoricha Doofummaa",
-        faayidaa: "Balghama sammuu keessatti hafe balleessuu fi dandeettii herregaa dammaqsuuf.",
-        haala: "Zanjabiila fi qustul-hindi damma waliin lallaaqanii yeroo hunda ganama soorachuu."
-    },
-    {
-        maqaa: "Qoricha Fedhii Nyaataa Dhabuu",
-        faayidaa: "Garaacha dadhabe kakaasuuf, fedhii soorataa banuu, fi miira nuffii balleessuuf.",
-        haala: "Dhangaggee (Vinegar) nyaata irratti makuu ykn safarjal (quince) nyaachuu."
-    }
-];
-
-// 2. Funshinii Kaardota Deetaa Sanaa Ittiin Dhalu
-function agarsiisiQorichoota(data) {
-    const listContainer = document.getElementById('biqiltuuList');
-    if (!listContainer) return; 
-    
-    let htmlContent = ''; 
-
-    data.forEach(item => {
-        htmlContent += `
-            <div class="content-section">
-                <h3>${item.maqaa}</h3>
-                <p><strong>Faayidaa:</strong> ${item.faayidaa}</p>
-                <p><strong>Haala Ittifayyadamaa:</strong> ${item.haala}</p>
+        <section id="haba-suudaa" class="content-section">
+            <h2>Kutaa 01 / Qoricha Uumamaa: Haba-suudaa</h2>
+            <div class="sub-section">
+                <h3>1. Sirna Hargansaa fi Utallaa</h3>
+                <p><strong>Utallaa:</strong> Yoo Haba-suudaan waxalamtee (fried), uffata killaasii keessatti hidhamtee funyaaniin urguffatan (inhale), utallaa gogaa fi qorra irraa dhufuuf furmaata dha.</p>
+                <p><strong>Asmii fi Hargansaa:</strong> Qoonqoo fi qoma keessaa dhibee itti citu (mucus) qulqulleessuun hargansaa ni salphisti.</p>
             </div>
-        `;
-    });
-    
-    listContainer.innerHTML = htmlContent; 
-}
+            <div class="sub-section">
+                <h3>2. Sirna Nyaataa fi Summii</h3>
+                <p><strong>Garaa Kaasaa fi Garaa Gubaa:</strong> Garaa keessaa dhuufa ykn dhuunfuu (gas) ni balleessiti.</p>
+                <p><strong>Rirma Garaa:</strong> Yoo dammaa fi bishaan ho'aan dhugame, rirma garaa (worms) ni ajjeesti.</p>
+                <p><strong>Dhagaa Kalee:</strong> Yoo dammaa fi bishaan ho'aa waliin dhugame, dhagaa kalee fi afuuffee keessatti uumamu ni bulbullee baasti.</p>
+            </div>
+            <div class="sub-section">
+                <h3>3. Dhukkubbii Qaama Alaa</h3>
+                <p><strong>Mataa Bowwuu:</strong> Yoo bifa dibataatiin ykn vaayinaagira (vinegar) waliin adda irratti dibatan, mataa bowwuu qorra irraa dhufuuf qoricha.</p>
+                <p><strong>Ilkaan:</strong> Yoo bishaan vaayinaagiraa keessatti affeelamee ittiin kofalani (rinse), dhukkubbii ilkaanii ni hir'isti.</p>
+                <p><strong>Barasii fi Dhukkuba Gogaa:</strong> Yoo ashaaraa (vinegar) waliin walitti makuun gogaa irratti dibatan, barasii fi shiftoo gogaa tokko tokkoof ni gargaarti.</p>
+            </div>
+            <div class="sub-section">
+                <h3>4. Faayidaalee Biroo</h3>
+                <p><strong>Garaacha:</strong> Nyaata bullaa'uu didu bulleessuuf ni gargaarti.</p>
+                <p><strong>Dhibee Dubartootaa:</strong> Marsaa xurii (menstruation) sirreessuu fi aannan harmaa dubartootaaf dabaluu irratti shoora ni qabdi.</p>
+            </div>
+            <h3>Qajeelfama Ibnul Qayyim Dabarse</h3>
+            <blockquote>Haba-suudaan miira "Ho'aa fi Gogaa" waan qabduuf, dhibeewwan jiidha (moisture) fi qorra irraa dhufan qolachuuf baay'ee gaariidha.</blockquote>
+            <div class="note">
+                <strong>Yaadachiisa:</strong> Akka ammayyaatti, Haba-suudaa fayyadamuu yoo barbaadde, mudaa (dosage) ishee gahaa ta'e qofa fayyadami. Yoo dhibee biroo qabaatte ogeessa gorsa gaafachuun gaariidha.
+            </div>
+        </section>
 
-// 3. Hojii Barbaachaa (Search Function)
-function searchFunction() {
-    const query = document.getElementById('searchInput').value.toLowerCase();
-    const filtered = xibbNabawiiData.filter(b => 
-        b.maqaa.toLowerCase().includes(query) || 
-        b.faayidaa.toLowerCase().includes(query)
-    );
-    agarsiisiQorichoota(filtered);
-}
+        <section id="qullubbii-adii" class="content-section">
+            <h2>Kutaa 04 / Qoricha Uumamaa: Qullubbii Adii</h2>
+            <p>Ibnul Qayyim akka jedhutti, Qullubbii Adiin qoricha baay'ee jabaa ho'aa fi gogaa ta'e dha. Faayidaalee isaa keessaa:</p>
+            <ul>
+                <li><strong>Summii Ittisuu:</strong> Nama summiin qabameef, akkasumas nama humni bofaa ykn aqraabaa waraaneef dhibee ni qolata; bifa dibataatiinis ni ta'a.</li>
+                <li><strong>Dhuunfuu fi Koflaa:</strong> Dhuunfuu (gas) garaa keessaa ni balleessa, koflaa (phlegm) ni kutata, garaacha keessaa jiidha badala ta'e ni qulqulleessa.</li>
+                <li><strong>Fincaan fi Marsaa Xurii:</strong> Fincaan dhangalaasuu irratti humna guddaa qaba; dubartoota xuriin dhiigaa jalaa citeefis ni gargaara.</li>
+                <li><strong>Qomaa fi Quufaa:</strong> Yoo affeelamee bishaan isaa dhugame, quufaa (cough) yeroo dheeraa fi dhukkubbii qomaa qorra irraa dhufuuf furmaata.</li>
+                <li><strong>Madaa fi Gogaa:</strong> Yoo damma waliin makuun barasii (vitiligo) irratti dibatan ni fayyada; dhiitama qaamaa ni bulbullee baasa.</li>
+                <li><strong>Ilkaan:</strong> Yoo ashaaraa (vinegar) waliin affeelamee ittiin kofalani, dhukkubbii ilkaanii ni hir'isa.</li>
+            </ul>
+            <div class="note">
+                <strong>تنبيه ابن القيم (Yaadachiisa):</strong> Yoo baay'inaan nyaatame mata-bowwuu fiduu fi ija miidhuu danda'a. Foolii isaa balleessuuf garuu affeelanii (cooked) nyaachuun gaariidha.
+            </div>
+        </section>
 
-// 4. Yeroo Appiin Guutummaatti Banamu Jalqaba Hunda Agarsiisi
-document.addEventListener('DOMContentLoaded', () => {
-    agarsiisiQorichoota(xibbNabawiiData);
-});
-</script>
-    <section id="timiraa" class="content-section">
-        <h2>Kutaa 09 / Qoricha Uumamaa: Timiraa</h2>
-        <ul>
-            <li><strong>Tiruun fi Garaacha:</strong> Timirri tiruu fi garaacha ni jabeessa, nyaata qaamaaf humna guddaa kennuudha.</li>
-            <li><strong>Summii fi Sihrii Ittisuu:</strong> Hadiisa Nabiyyii (scw) irratti hundaa'uun, Timirri (keessummaa Ajwaan) summii fi ija-budaa ykn sihrii irraa nama eega jedha.</li>
-            <li><strong>Rirma Garaa:</strong> Yoo ganama otoo nyaata biraa hin nyaatin (on empty stomach) nyaatame, rirma garaa (worms) ni ajjeesa.</li>
-            <li><strong>Timira Jiidhaa (Ruxab):</strong> Garaacha qorraan miidhame ni jabeessa, humna saal-quunnamtii ni dabala, qaamas ni gabbisa.</li>
-        </ul>
-        <blockquote>هو فاكهة وغذاء ودواء وحلوى، وهو من أفضل ما يُفطر عليه الصائم ليرد إلى الكبد قواها.<br><strong>[Afaan Oromoo]:</strong> Timirri fuduraadha, nyaata, qorichas, akkasumas mi'aawaadha. Namni soomanu tokko yeroo furu Timiraan yoo eegale, tiruun isaa humna ishee ariitiin akka deeffattu gochuuf filatamaa dha.</blockquote>
-    </section>
+        <section id="hulubataa" class="content-section">
+            <h2>Kutaa 05 / Qoricha Uumamaa: Hulubataa</h2>
+            <h3>1. Sirna Hargansaa fi Qomaa</h3>
+            <p>Hulubanni bishaan keessatti affeelamee yoo dhugame, Quufaa (cough) fi Asmii ni salphisti. Qomaa fi dhuunshoo (lungs) keessaa dhibee furriifi koflaa (phlegm) furmisiisanii baasuuf baay'ee gargaarti.</p>
+            <h3>2. Sirna Nyaataa fi Garaa</h3>
+            <p>Dhukkubbii garaa fi mar'ummaanii ni qabbaneessiti. Garaa gogaa ni laaffisti (Laxative), dhuunfuu fi gubaa garaa keessaa ni balleessiti.</p>
+            <h3>3. Faayidaa Dubartootaaf</h3>
+            <p>Dubartoota hoosisaniif aannan harmaa akka baay'atu gochuu irratti humna guddaa qabdi. Marsaa xurii (menstruation) dubartootaa ni sirreessiti.</p>
+            <h3>4. Dhukkubbii Alaa fi Gogaa</h3>
+            <p>Mata-biraa ykn dhiitama qaama alaa irratti yoo dibatan (Lidhuu/Poultice), dhiitama ni bulbullee baasti. Rifeensaaf yoo bishaan isheetiin mataa dhiqatan, rifeensa ni jabeessiti, qola mataa (dandruff) ni balleessiti.</p>
+            <h3>5. Dhukkuboota Biroo</h3>
+            <p>Dhukkubii Bawaasiraa (Hemorrhoids) qabaniif, bishaan ishee keessa taa'uun (sitting bath) dhukkubbii ni hir'isa. Madaa fi dhiitama kalee fi madiitti uumamuuf qoricha gaariidha.</p>
+            <h3>Akkaataa Itti Fayyadamaa (Akka Heddii Nabiyyiitti)</h3>
+            <ul>
+                <li><strong>Dhuguuf:</strong> Bulee ishee bishaan keessatti affeelanii bishaanicha dammaan makuun dhuguu.</li>
+                <li><strong>Dibachuuf:</strong> Hulubaa daakamte damma ykn ashaaraa (vinegar) waliin makuun bakka dhiitamaa ykn madaa irratti dibachuu.</li>
+                <li><strong>Nyaataaf:</strong> Akkuma jirtutti nyaata waliin makuu.</li>
+            </ul>
+            <blockquote>"Namoonni otoo faayidaa Hulubata keessa jiru beekanii, otoo gatii warqeetiin bitamteellee ni bitatu turan." - Mammaaksa Ogeeyyii Durii</blockquote>
+        </section>
 
-    <section id="tamiirul-hindii" class="content-section">
-        <h2>Kutaa 10 / Qoricha Uumamaa: Tamiirul Hindii (Tamarind)</h2>
-        <ul>
-            <li><strong>Dhibee Finniisaa (Bile):</strong> Ho'a finniisaa (bile) garmalee qaama keessatti ka'u ni qabbaneessa.</li>
-            <li><strong>Garaa Laaffisuu:</strong> Garaa laaffisuu (laxative) irratti shoora ni qaba.</li>
-            <li><strong>Dheebuu fi Haqqee:</strong> Dheebuu jabaa ni qabbaneessa, haqqee fi miira ol-garagalchu ni ittisa.</li>
-        </ul>
-        <div class="note">
-            <strong>Qajeelfama Itti Fayyadamaa:</strong> Akka inni mi'aawuuf bishaan keessa bulchanii (soaking) damma ykn sukkaara xiqqoo waliin dhuguun filatamaadha. Keessumaa waqtii gannaa (ho'a jabaa) keessatti baay'ee barbaachisaadha.
-        </div>
-    </section>
+        <section id="talbaa" class="content-section">
+            <h2>Kutaa 06 / Qoricha Uumamaa: Qoonxar / Talbaa</h2>
+            <p>Ibnul Qayyim kitaaba isaa "Xibb-un-Nabawii" keessatti sanyiin Qoonxar/Talbaa: ho'aa fi jiidhaa akka ta'ee fi faayidaa guddaa akka qabu ibseera.</p>
+            <ul>
+                <li><strong>Quufaa fi Qoma:</strong> Quufaa yeroo dheeraa ni qabbaneessa; dhukkubbii qomaa fi sombaaf ni gargaara.</li>
+                <li><strong>Kalee fi Fincaan:</strong> Fincaan ni dhangalaasa; yoo dammaan makamee dhugame dhagaa kalee fi afuuffee fincaanii keessatti uumamu bulbullee baasuuf gargaara.</li>
+                <li><strong>Dhiitama fi Gogaa:</strong> Yoo ashaaraa (vinegar) waliin makuun bakka dhiitamaa irratti dibatan, dhiitama ni bulbullee baasa; gogaa ni qulqulleessa, rifeensa ni fooyyessa, qola mataas (dandruff) ni balleessa.</li>
+            </ul>
+            <p><strong>Akkaataa Itti Fayyadamaa:</strong> Sanyiin killaasii yoo waxalame (roasted) garaa hidha (constipation), yoo akkuma jirutti (dhuunshaan) fayyadaman immoo garaa laaffisaa fi xurii garaa keessaa baasuuf gargaara.</p>
+        </section>
 
-    <section id="jinjiibilaa" class="content-section">
-        <h2>Kutaa 11 / Qoricha Uumamaa: Jinjiibilaa</h2>
-        <ul>
-            <li><strong>Garaacha fi Tiruu:</strong> Garaachaa fi tiruu ni ho'isa, nyaata bulleessuu irratti shoora guddaa qaba.</li>
-            <li><strong>Yaadannoo fi Sammuu:</strong> Sammuu keessaa jiidha badaa qulqulleessuun yaadannoo ni jabeessa, irraanfannoo ni hir'isa.</li>
-            <li><strong>Fayyaa Ijaa:</strong> Yoo damma waliin makuun akka kuulaatti ija dibatan, dimimmisa ijaa ni qulqulleessa.</li>
-        </ul>
-        <blockquote><strong>Gorsa Itti Fayyadamaa:</strong> Jinjiibila dammaa fi bishaan ho'aa waliin makuun dhuguun, koflaa qulqulleessuu fi qoma jabeessuuf hunda caala.</blockquote>
-    </section>
+        <section id="shunkurtaa-diimaa" class="content-section">
+            <h2>Kutaa 07 / Qoricha Uumamaa: Shunkurtaa Diimaa</h2>
+            <ul>
+                <li><strong>Summii Ittisuu:</strong> Bishaan bakkaa bakkatti jijjiiramuun dhufe ykn qilleensa summaa'aa irraa dhukkuba dhufu ni ittisa.</li>
+                <li><strong>Sirna Nyaataa:</strong> Fedhii nyaataa ni dabala, garaacha ni jabeessa, koflaa (phlegm) ni kutata, akkasumas jiidha garaacha keessa jiru ni qulqulleessa.</li>
+                <li><strong>Midihaa fi Ijaa:</strong> Yoo damma waliin makuun akka kuulaatti ija dibatan, bishaan ija keessa jiruuf gaariidha. Yoo barasii (vitiligo) irratti dibatan ni fayyada.</li>
+                <li><strong>Fincaan fi Humna Qaamaa:</strong> Fincaan ni dhangalaasa, humna saal-quunnamtii ni dabala, marsaa xurii dubartootaas ni sirreessa.</li>
+                <li><strong>Madaa fi Shiftoo:</strong> Yoo soogidda waliin makuun godaannisa ykn kormatti (warts) irratti dibatan, buqqisee baasa.</li>
+            </ul>
+            <p><strong>Gorsa Nama Karaa Deemuuf:</strong> Namni gara biyya biraa deemu tokko, dhibee naannoo sanaa fi bishaan jijjiirame irraa of eeguuf shunkurtaa diimaa nyaachuu qaba jedha.</p>
+            <div class="note">
+                <strong>Yaadachiisa Ibnul Qayyim:</strong> Namni shunkurtaa nyaate yoo gara masjiidaa deemu foolii ishee balleessuuf baala Sududaa (Rue) nyaachuu ykn shunkurtaacha affeelanii (cooked) nyaachuun foolii ishee akka hir'isu ibseera.
+            </div>
+        </section>
 
-    <section id="wantoota-miidhan" class="content-section">
-        <h2>Kutaa 18 / Qoricha Uumamaa: Wantoota Fayyaa Miidhan</h2>
-        <ul>
-            <li><strong>Nyaata Irratti Nyaachuu:</strong> Otoo inni duraa hin bullaayin kan biraa nyaachuun garaacha jabeessee miidha.</li>
-            <li><strong>Garmalee Quufu:</strong> Garaa guuttatanii nyaachuun qaama ni ulfaatessa, sammuu ni doofumsa.</li>
-            <li><strong>Nyaata Irratti Bishaan Dhuguu:</strong> Keessumaa bishaan qorraa yeroo nyaataa dhuguun nyaata akka hin bullaayne godha.</li>
-            <li><strong>Guyyaa Rafuu:</strong> Hirribni guyyaa (ganama ykn galgala booda) qaama ni dadhabsiisa, bifa fuulaa ni balleessa.</li>
-            <li><strong>Xurii Qaamaa Dhowwachuu:</strong> Fincaan, dhuunfuu fi xurii garaa dhowwachuun kalee fi mar'ummaan ni miidha.</li>
-        </ul>
-    
-    <blockquote>حمية الجسم عن الفضولات، وحمية الروح عن الآفات، هما جماع الصحة.<br><strong>[Afaan Oromoo]:</strong> Qaama xurii irraa eeguu fi hafuura (soul) dhibee irraa 
-        <script>
-function toggleMenu() {
-    var menu = document.getElementById("navMenu");
-    menu.classList.toggle("active");
-}
-        </script>
-        
-</script>
+        <section id="rummaanaa" class="content-section">
+            <h2>Kutaa 08 / Qoricha Uumamaa: Rummaanaa</h2>
+            <p>Ibnul Qayyim akka jedhutti, Rummaanichi akaakuu lama qaba:</p>
+            <ul>
+                <li><strong>Rummaana Mi'aawaa:</strong> Ho'aa fi jiidhaa dha; garaachaaf baay'ee gaariidha, ni jabeessa. Qoonqoo, qomaa fi sombaaf ni fayyada, quufaas ni qabbaneessa.</li>
+                <li><strong>Rummaana Dhangaggaa'aa:</strong> Qorraa fi gogaadha; garaacha jabeessuu irratti humna guddaa qaba. Fincaan ni dhangalaasa, finniisa (bile) ni qabbaneessa, garaa kaasaa ni dhaaba, akkasumas haqqee ni ittisa.</li>
+                <li><strong>Irgii fi Afaan:</strong> Yoo bishaan qola isaa affeelamee ittiin kofalani (rinse), irgii dhiigu ni jabeessa.</li>
+                <li><strong>Madaa:</strong> Qolli rummaanaa yoo akka dibataatti fayyadaman, madaa hamaa ta'e fayyisuuf gargaara.</li>
+            </ul>
+            <blockquote>الرمان الحلو يوافق الصدر، والحامض يوافق المعدة الملتهبة.<br><strong>[Afaan Oromoo]:</strong> Rummaanni mi'aawaan qomaaf deeggarsa kenna, inni dhangaggaa'aan immoo garaacha gubatuuf (inflammation) furmaata.</blockquote>
+        </section>
 
+        <section id="timiraa" class="content-section">
+            <h2>Kutaa 09 / Qoricha Uumamaa: Timiraa</h2>
+            <ul>
+                <li><strong>Tiruun fi Garaacha:</strong> Timirri tiruu fi garaacha ni jabeessa, nyaata qaamaaf humna guddaa kennuudha.</li>
+                <li><strong>Summii fi Sihrii Ittisuu:</strong> Hadiisa Nabiyyii (scw) irratti hundaa'uun, Timirri (keessummaa Ajwaan) summii fi ija-budaa ykn sihrii irraa nama eega jedha.</li>
+                <li><strong>Rirma Garaa:</strong> Yoo ganama otoo nyaata biraa hin nyaatin (on empty stomach) nyaatame, rirma garaa (worms) ni ajjeesa.</li>
+                <li><strong>Timira Jiidhaa (Ruxab):</strong> Garaacha qorraan miidhame ni jabeessa, humna saal-quunnamtii ni dabala, qaamas ni gabbisa.</li>
+            </ul>
+            <blockquote>هو فاكهة وغذاء ودواء وحلوى، وهو من أفضل ما يُفطر عليه الصائم ليرد إلى الكبد قواها.<br><strong>[Afaan Oromoo]:</strong> Timirri fuduraadha, nyaata, qorichas, akkasumas mi'aawaadha. Namni soomanu tokko yeroo furu Timiraan yoo eegale, tiruun isaa humna ishee ariitiin akka deeffattu gochuuf filatamaa dha.</blockquote>
+        </section>
+
+        <section id="tamiirul-hindii" class="content-section">
+            <h2>Kutaa 10 / Qoricha Uumamaa: Tamiirul Hindii (Tamarind)</h2>
+            <ul>
+                <li><strong>Dhibee Finniisaa (Bile):</strong> Ho'a finniisaa (bile) garmalee qaama keessatti ka'u ni qabbaneessa.</li>
+                <li><strong>Garaa Laaffisuu:</strong> Garaa laaffisuu (laxative) irratti shoora ni qaba.</li>
+                <li><strong>Dheebuu fi Haqqee:</strong> Dheebuu jabaa ni qabbaneessa, haqqee fi miira ol-garagalchu ni ittisa.</li>
+            </ul>
+            <div class="note">
+                <strong>Qajeelfama Itti Fayyadamaa:</strong> Akka inni mi'aawuuf bishaan keessa bulchanii (soaking) damma ykn sukkaara xiqqoo waliin dhuguun filatamaadha. Keessumaa waqtii gannaa (ho'a jabaa) keessatti baay'ee barbaachisaadha.
+            </div>
+        </section>
+
+        <section id="jinjiibilaa" class="content-section">
+            <h2>Kutaa 11 / Qoricha Uumamaa: Jinjiibilaa</h2>
+            <ul>
+                <li><strong>Garaacha fi Tiruu:</strong> Garaachaa fi tiruu ni ho'isa, nyaata bulleessuu irratti shoora guddaa qaba.</li>
+                <li><strong>Yaadannoo fi Sammuu:</strong> Sammuu keessaa jiidha badaa qulqulleessuun yaadannoo ni jabeessa, irraanfannoo ni hir'isa.</li>
+                <li><strong>Fayyaa Ijaa:</strong> Yoo damma waliin makuun akka kuulaatti ija dibatan, dimimmisa ijaa ni qulqulleessa.</li>
+            </ul>
+            <blockquote><strong>Gorsa Itti Fayyadamaa:</strong> Jinjiibila dammaa fi bishaan ho'aa waliin makuun dhuguun, koflaa qulqulleessuu fi qoma jabeessuuf hunda caala.</blockquote>
+        </section>
+
+        <section id="wantoota-miidhan" class="content-section">
+            <h2>Kutaa 18 / Qoricha Uumamaa: Wantoota Fayyaa Miidhan</h2>
+            <ul>
+                <li><strong>Nyaata Irratti Nyaachuu:</strong> Otoo inni duraa hin bullaayin kan biraa nyaachuun garaacha jabeessee miidha.</li>
+                <li><strong>Garmalee Quufu:</strong> Garaa guuttatanii nyaachuun qaama ni ulfaatessa, sammuu ni doofumsa.</li>
+                <li><strong>Nyaata Irratti Bishaan Dhuguu:</strong> Keessumaa bishaan qorraa yeroo nyaataa dhuguun nyaata akka hin bullaayne godha.</li>
+                <li><strong>Guyyaa Rafuu:</strong> Hirribni guyyaa (ganama ykn galgala booda) qaama ni dadhabsiisa, bifa fuulaa ni balleessa.</li>
+                <li><strong>Xurii Qaamaa Dhowwachuu:</strong> Fincaan, dhuunfuu fi xurii garaa dhowwachuun kalee fi mar'ummaan ni miidha.</li>
+            </ul>
+            <blockquote>حمية الجسم عن الفضولات، وحمية الروح عن الآفات، هما جماع الصحة.<br><strong>[Afaan Oromoo]:</strong> Qaama xurii irraa eeguu fi hafuura (soul) dhibee irraa eeguun hundee fayyaati.</blockquote>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Qoricha-aadaa-App. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const xibbNabawiiData = [
+            { maqaa: "Qaranfulii (Cloves)", faayidaa: "Dhukkubbii ilkaanii hir'isuu, mudhii fi jilba jabeessu, fi foolii afanii miidhagsuuf.", haala: "Ilkaan jidduu qabuun ykn affeelanii bishaan isaatiin afaan lallaaqachuun." },
+            { maqaa: "Quusxiul Hindii (Indian Costus)", faayidaa: "Dhukkubbii qoonqoo, itootta (tonsillitis), koronaa/qufaa, fi dhibeewwan narvii jabeessuuf.", haala: "Daakanii bishaanitti makuun funfaachuu ykn damma waliin makuun liqimsuu." },
+            { maqaa: "Dhadhaa Sa'aa (Cow Ghee)", faayidaa: "Gogaa qaamaa laafisuu, madaa keessoo fayyisuu, fi humna sammuu fi lafee qaruuf.", haala: "Nyaata ho'aa irratti makuun ykn qorichoota biraa waliin makuun soorachuu." },
+            { maqaa: "Aannan (Milk)", faayidaa: "Lafee jabeessuuf, qaama nuffisiisu irraa bilisa gochuu, fi garaacha dhiphate jiisuuf.", haala: "Ho'isanii damma itti naquun galgala galgala dhuguun baay'ee gorfama." },
+            { maqaa: "Qarfaatii (Cinnamon)", faayidaa: "Garaacha gubaa dhowwuu, bullaa'insa nyaataa saffisiisuu, fi qufaa fi qorrii hir'isuuf.", haala: "Shayiitti makuun ykn bishaanitti affeelanii bifa koflaatiin dhuguun gaariadha." },
+            { maqaa: "Kaarotii (Carrot)", faayidaa: "Ija jabeessuuf, xurii dhiiga keessaa qulqulleessuuf, fi gogaa qaamaa miidhagsuuf.", haala: "Kallaattiin nyaachuu ykn cuunfaa (juice) isaa damma waliin makuun dhuguu." },
+            { maqaa: "Eegumsa fi Guddina Daa'immanii", faayidaa: "Lafee isaanii jabeessuuf, dhukkubbii garaa ittisuuf, fi sammuu isaanii dammaqsuuf.", haala: "Aannan haadhaa dabalatee, zayita habba-suudaa xiqqoo miila fi duuba isaanii dibuu." },
+            { maqaa: "Qoricha Fayyaa Dubartootaa", faayidaa: "Dhukkubbii menses (laguu) hir'isuu, xannacha madaaluu, fi qaama keessoo qulqulleessuuf.", haala: "Hulubataa fi qarafaa affeelanii bishaan isaa damma waliin dhuguun." },
+            { maqaa: "Eegumsa Fayyaa Dubartii Ulfaa", faayidaa: "Ulfi akka jabaatu, dhiiga dabalataa kennuuf, fi miira koflaa/laafina hir'isuuf.", haala: "Timira daddabalanii nyaachuu fi aannan loonii qulqulluu galgala dhuguu." },
+            { maqaa: "Qoricha Dubartii Deesseef", faayidaa: "Aannan harmaa baay'isuuf, dhiiga xurii qaama keessaa baasuuf, fi humna deebisuuf.", haala: "Hulubataa damma waliin affeelanii nyaachuu fi kofla timiraa soorachuu." },
+            { maqaa: "Eegumsa Fayyaa Dargaggootaaf", faayidaa: "Humna isportii jabeessuuf, fuula qulqulleessuuf, fi dandeettii sammuu qaruuf.", haala: "Habbat al-sawda fi jinjibila daakanii damma waliin liqimsuu fi bishaan baay'isuu." },
+            { maqaa: "Eegumsa Fayyaa Maanguddootaaf", faayidaa: "Dhukkubbii jilbaa fi mudhii hir'isuu, madaallii onnee eeguu, fi lafee jabeessuuf.", haala: "Dhadhaa loonii nyaata irratti fayyadamuu fi aannan ho'aa timira waliin soorachuu." },
+            { maqaa: "Ilaalcha Isportii fi Sochiilee Qaamaa", faayidaa: "Dhiigni qaama keessa sirriitti akka naanna'u gochuuf, fi dadhabbi dhabamsiisuuf.", haala: "Sochii qaamaa erga xumuranii booda bishaan zanjabiila qabu dhuguu." },
+            { maqaa: "Qajeelfama fi Fayyaa Uffataa", faayidaa: "Qulqullina qaamaa eeguu, uffata dhiphaa irraa fagaachuu fi dhibee gogaa ittisuuf.", haala: "Uffata qubbaayaa (cotton) uffachuu fi foolii gaarii (shitto) fayyadamuu." },
+            { maqaa: "Qajeelfama fi Fayyaa Dhugaatii", faayidaa: "Kale qulqulleessuuf, garaacha qabbaneessuuf, fi summii baasuuf.", haala: "Bishaan ta'anii (taphachaa) harka mirgaatiin bifa sadiin (3) hifachuun dhuguu." },
+            { maqaa: "Qajeelfama fi Fayyaa Hirribaa", faayidaa: "Sammuu boqochiisuuf, humnasii haara'uuf, fi dhibee dhiphinaa (stress) ittisuuf.", haala: "Galgala kofla subhii duranii gara mirgaatti garagalanii hirriiba garii rafuu." },
+            { maqaa: "Karaalee Irraanfannaa fi Yaadannoo", faayidaa: "Sammuu dammaqsuu, irraanfannaa hir'isuu, fi yaadannoo jabeessuuf.", haala: "Damma fi kofla firii habba-suudaa yeroo hunda ganama nyaachuu." },
+            { maqaa: "Wantoota Qalbii Qara Taasisan", faayidaa: "Hubannoo garmalee dabaluu, tilmaama sirrii kennuuf, fi sammuu bal'isuuf.", haala: "Miswaaka fayyadamuu, Quran dubbisuu, fi nyaata garmalee baay'isuu dhiisuu." },
+            { maqaa: "Maddaa fi Qoricha Doofummaa", faayidaa: "Balghama sammuu keessatti hafe balleessuu fi dandeettii herregaa dammaqsuuf.", haala: "Zanjabiila fi qustul-hindi damma waliin lallaaqanii yeroo hunda ganama soorachuu." },
+            { maqaa: "Qoricha Fedhii Nyaataa Dhabuu", faayidaa: "Garaacha dadhabe kakaasuuf, fedhii soorataa banuu, fi miira nuffii balleessuuf.", haala: "Dhangaggee (Vinegar) nyaata irratti makuu ykn safarjal (quince) nyaachuu." }
+        ];
+
+        function agarsiisiQorichoota(data) {
+            const listContainer = document.getElementById('biqiltuuList');
+            if (!listContainer) return; 
+            
+            let htmlContent = ''; 
+            data.forEach(item => {
+                htmlContent += `
+                    <div class="content-section">
+                        <h3>${item.maqaa}</h3>
+                        <p><strong>Faayidaa:</strong> ${item.faayidaa}</p>
+                        <p><strong>Haala Ittifayyadamaa:</strong> ${item.haala}</p>
+                    </div>
+                `;
+            });
+            listContainer.innerHTML = htmlContent; 
+        }
+
+        function searchFunction() {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            const mainSections = document.querySelectorAll('main > section');
+            
+            if (query === "") {
+                agarsiisiQorichoota([]);
+                mainSections.forEach(s => s.style.display = 'block');
+            } else {
+                mainSections.forEach(s => s.style.display = 'none');
+                document.querySelector('.index-list').style.display = 'block';
+                
+                const filtered = xibbNabawiiData.filter(b => 
+                    b.maqaa.toLowerCase().includes(query) || 
+                    b.faayidaa.toLowerCase().includes(query)
+                );
+                agarsiisiQorichoota(filtered);
+            }
+        }
+
+        function toggleMenu() {
+            var menu = document.getElementById("navMenu");
+            menu.classList.toggle("active");
+        }
+    </script>
 </body>
-</html>
+            </html>
